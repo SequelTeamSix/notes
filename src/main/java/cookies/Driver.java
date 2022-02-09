@@ -210,6 +210,16 @@ we can put all of our code in main i guess, but this is very disorganized
         myList.traverseCookies();
 
 
+
+        Object[] myObjects = new Object[16];
+
+        myObjects[0]=c1;
+        myObjects[1]=myString;
+
+        System.out.println(myObjects[0]);
+        System.out.println(myObjects[1]);
+
+
     }
 
     /*what is a method?
