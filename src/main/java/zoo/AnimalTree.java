@@ -32,8 +32,8 @@ public class AnimalTree {
 //                how do we decide if go left or right in the search tree?
 //                we do this by having a method that compares the new item to whatever
 //                branch we're looking at
-                if (current.getAnimal().compareTo(a) == -1) {
-                    System.out.println("Current animal: " + a.species + "Branching left");
+                if (current.getAnimal().compareTo(a) < 0) {
+                    System.out.println("Current animal: " + current.getAnimal().species + ", Branching left");
 //                    what if we need to move left, but that space is empty?
 //                    we set that new item to the new animal
 //                    we also exit out of the add method: our job is complete
@@ -48,8 +48,8 @@ public class AnimalTree {
 //                        current node
                         current = current.left;
                     }
-                } else if (current.getAnimal().compareTo(a) == 1) {
-                    System.out.println("Current animal: " + a.species + "Branching right");
+                } else if (current.getAnimal().compareTo(a) > 0) {
+                    System.out.println("Current animal: " + current.getAnimal().species + "Branching right");
                     if (current.right == null) {
                         current.right = new AnimalBranch(a);
                         System.out.println("Added animal: " + a.species);
@@ -57,6 +57,9 @@ public class AnimalTree {
                     } else {
                         current = current.right;
                     }
+                }else{
+                    System.out.println("Species " + a.species + "already exists!");
+                    return false;
                 }
             }
         }

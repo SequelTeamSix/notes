@@ -23,4 +23,14 @@ public class CookieArrayList {
 
 
 
+//    a method that can return a boolean determining if your array list contains a certain item
+//    (if you had an arraylist of objects, as opposed to primitives, you may need to implement and use .equals)
+//    a method that can determine if your arraylist is identical to another one
+//    (again, .equals)
+//    a method that sets a given index to a particular value
+
+
+
+
+
 }
