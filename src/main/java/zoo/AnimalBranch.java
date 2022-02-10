@@ -1,26 +1,26 @@
 package zoo;
 
-public class AnimalBranch {
+public class AnimalBranch<T extends Comparable<T>> implements Comparable<AnimalBranch>{
 
-    private Animal animal;
+    private T animal;
     AnimalBranch left;
     AnimalBranch right;
 
     public AnimalBranch() {
 
     }
-    public AnimalBranch(Animal a){
+    public AnimalBranch(T a){
         animal = a;
     }
     public int compareTo(AnimalBranch a){
-        return animal.species.compareTo(a.animal.species);
+        return animal.compareTo((T) a.getAnimal());
     }
 
-    public Animal getAnimal() {
+    public T getAnimal() {
         return animal;
     }
 
-    public void setAnimal(Animal animal) {
+    public void setAnimal(T animal) {
         this.animal = animal;
     }
 
