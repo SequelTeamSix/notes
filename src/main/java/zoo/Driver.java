@@ -14,6 +14,7 @@ public class Driver {
         Animal a3 = new Animal("shark");
         Animal a4 = new Animal("lion");
         Animal a5 = new Animal("lion");
+        Animal a6 = new Animal("zebra");
 
         System.out.println(a1.compareTo(a2));
 
@@ -28,7 +29,10 @@ public class Driver {
         tree.add(a3);
         tree.add(a4);
         tree.add(a5);
-        tree.add(a1);
+        System.out.println("does the tree contain lion?");
+        System.out.println(tree.contains(a5));
+        System.out.println("does the tree contain zebra?");
+        System.out.println(tree.contains(a6));
 
         /*
         Lists
