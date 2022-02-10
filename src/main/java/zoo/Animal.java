@@ -6,9 +6,11 @@ package zoo;
 //why do this?
 
 
+import cookies.Cookie;
+
 //interfaces are a "contract" of behavior
 //IE, everything that implements comparable has a contract to be a comparable object
-public class Animal {
+public class Animal implements Comparable<Animal>{
     String species;
     int temp = 0;
     public Animal(String s) {
@@ -25,7 +27,27 @@ public class Animal {
 //      so in java there's something called reflection...
 //      meaning that we can make programs that change our java code at runtime
 //      rather than compilation
+
     public int compareTo(Animal a) {
         return a.species.compareTo(this.species);
     }
+
+    public String toString(){
+        return species;
+    }
+
+
+    /*abstract classes are basically blueprints
+    * interfaces are guarantees of certain behaviors that other classes can expect the
+    * class to exhibit (eg a for loop class can expect an object to be able
+    * to be iterated
+    * */
+
+
+    /*
+    what's the difference between interfaces and abstract classes?
+    we implement interfaces and extend abstract classes
+     */
+
+
 }

@@ -1,8 +1,8 @@
 package zoo;
 
-public class AnimalTree {
+public class AnimalTree<T extends Comparable<T>> {
 
-    AnimalBranch head;
+    AnimalBranch<T> head;
 
     public AnimalTree() {
 
@@ -22,9 +22,9 @@ public class AnimalTree {
 //    we will need to check if head is null first
 
 //    return true if adding was successful
-    public boolean add(Animal a){
+    public boolean add(T a){
         if(head ==null){
-            System.out.println("Added as head: "+ a.species);
+            System.out.println("Added as head: "+ a);
             head = new AnimalBranch(a);
         }else{
             AnimalBranch current = head;
@@ -33,13 +33,13 @@ public class AnimalTree {
 //                we do this by having a method that compares the new item to whatever
 //                branch we're looking at
                 if (current.getAnimal().compareTo(a) < 0) {
-                    System.out.println("Current animal: " + current.getAnimal().species + ", Branching left");
+                    System.out.println("Current animal: " + current + ", Branching left");
 //                    what if we need to move left, but that space is empty?
 //                    we set that new item to the new animal
 //                    we also exit out of the add method: our job is complete
                     if (current.left == null) {
                         current.left = new AnimalBranch(a);
-                        System.out.println("Added animal: " + a.species);
+                        System.out.println("Added animal: " + a);
                         return true;
                     } else {
 //                       what if the left node is already taken?
@@ -49,16 +49,16 @@ public class AnimalTree {
                         current = current.left;
                     }
                 } else if (current.getAnimal().compareTo(a) > 0) {
-                    System.out.println("Current animal: " + current.getAnimal().species + "Branching right");
+                    System.out.println("Current animal: " + current + "Branching right");
                     if (current.right == null) {
                         current.right = new AnimalBranch(a);
-                        System.out.println("Added animal: " + a.species);
+                        System.out.println("Added animal: " + a);
                         return true;
                     } else {
                         current = current.right;
                     }
                 }else{
-                    System.out.println("Species " + a.species + "already exists!");
+                    System.out.println("Species " + a + "already exists!");
                     return false;
                 }
             }
@@ -78,7 +78,7 @@ public class AnimalTree {
 //                we do this by having a method that compares the new item to whatever
 //                branch we're looking at
                 if (current.getAnimal().compareTo(a) < 0) {
-                    System.out.println("Current animal: " + current.getAnimal().species + ", Branching left");
+                    System.out.println("Current animal: " + current + ", Branching left");
 //                    what if we need to move left, but that space is empty?
 //                    we set that new item to the new animal
 //                    we also exit out of the add method: our job is complete
@@ -94,7 +94,7 @@ public class AnimalTree {
                         current = current.left;
                     }
                 } else if (current.getAnimal().compareTo(a) > 0) {
-                    System.out.println("Current animal: " + current.getAnimal().species + "Branching right");
+                    System.out.println("Current animal: " + current + "Branching right");
                     if (current.right == null) {
                         current.right = new AnimalBranch(a);
                         System.out.println("Animal does not exist: " + a.species);

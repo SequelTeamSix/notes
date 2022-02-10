@@ -1,6 +1,6 @@
 package cookies;
 
-public class Cookie extends Object{
+public class Cookie extends Object implements Comparable<Cookie> {
 
 /*whats a class?
 a class is a blueprint for an object

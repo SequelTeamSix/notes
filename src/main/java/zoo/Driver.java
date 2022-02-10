@@ -2,6 +2,8 @@ package zoo;
 
 import cookies.Cookie;
 
+import java.util.ArrayList;
+
 public class Driver {
 
     public static void main(String[] args){
@@ -22,7 +24,17 @@ public class Driver {
 
 
 
-        AnimalTree tree = new AnimalTree();
+        AnimalTree<Animal> tree = new AnimalTree<Animal>();
+        AnimalTree<Cookie> tree2 = new AnimalTree<Cookie>();
+
+        ArrayList<String> list1 = new ArrayList<>();
+        ArrayList<Cookie> list2 = new ArrayList<>();
+
+        /*
+        why do we do this?
+        the alternative is to have separate data structure implementations for all
+        of the classes we're using
+         */
 
         tree.add(a1);
         tree.add(a2);
