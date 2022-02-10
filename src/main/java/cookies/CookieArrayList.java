@@ -29,6 +29,10 @@ public class CookieArrayList {
 //    (again, .equals)
 //    a method that sets a given index to a particular value
 
+    Cookie[] cookieList = new Cookie[16];
+    public Cookie get(int i){
+        return cookieList[i];
+    }
 
 
 

@@ -101,4 +101,8 @@ objects have states (variables) and behaviors (methods)
         return type;
     }
 
+    @Override
+    public int compareTo(Cookie o) {
+        return 0;
+    }
 }

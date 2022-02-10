@@ -67,9 +67,9 @@ public class AnimalTree<T extends Comparable<T>> {
         return false;
 
     }
-    public boolean contains(Animal a){
+    public boolean contains(T a){
         if(head ==null){
-            System.out.println("Added as head: "+ a.species);
+            System.out.println("Added as head: "+ a);
             return false;
         }else{
             AnimalBranch current = head;
@@ -83,7 +83,7 @@ public class AnimalTree<T extends Comparable<T>> {
 //                    we set that new item to the new animal
 //                    we also exit out of the add method: our job is complete
                     if (current.left == null) {
-                        System.out.println("Animal does not exist: " + a.species);
+                        System.out.println("Animal does not exist: " + a);
                         return false;
 
                     } else {
@@ -97,13 +97,13 @@ public class AnimalTree<T extends Comparable<T>> {
                     System.out.println("Current animal: " + current + "Branching right");
                     if (current.right == null) {
                         current.right = new AnimalBranch(a);
-                        System.out.println("Animal does not exist: " + a.species);
+                        System.out.println("Animal does not exist: " + a);
                         return false;
                     } else {
                         current = current.right;
                     }
                 }else{
-                    System.out.println("Species " + a.species + "already exists!");
+                    System.out.println("Species " + a + "already exists!");
                     return true;
                 }
             }

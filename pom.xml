@@ -7,9 +7,20 @@
     <!--
     XML?
     type of markdown file - no programming here!
+    Maven?
+    Maven is dependency management and build tool
+    Maven configurations are handled in the pom.xml file
+        (Project Object Model)
+
+    pom.xml tags:
+        pproperties - project speicific settings
+        project-root tag of project
+        modelversion-defines the version of pom
+        name - name of project
+        dependencies -
     -->
 
-    <groupId>org.example</groupId>
+    <groupId>org.revature</groupId>
     <artifactId>JavaReactAzure</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -21,9 +32,9 @@
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit</groupId>
+            <artifactId>junit5-engine</artifactId>
+            <version>5.0.0-ALPHA</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
