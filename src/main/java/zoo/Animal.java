@@ -13,8 +13,12 @@ import cookies.Cookie;
 public class Animal implements Comparable<Animal>{
     String species;
     int temp = 0;
-    public Animal(String s) {
+    public Animal(String s) throws FakeAnimalException {
+        if(s.equals("Bigfoot")){
+            throw new FakeAnimalException("Not a real animal", new Exception());
+        }
         species = s;
+
     }
 //    I want to compare two animals so that we can have them sorted:
 //    how is this done?

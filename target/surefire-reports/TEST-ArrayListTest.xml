@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AnimalTreeTest" time="0.098" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ArrayListTest" time="0.002" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\test-classes;C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\classes;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\TedBa\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\TedBa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\TedBa\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\TedBa\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\test-classes;C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\classes;C:\Users\TedBa\.m2\repository\org\junit\junit5-engine\5.0.0-ALPHA\junit5-engine-5.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\junit\junit5-api\5.0.0-ALPHA\junit5-api-5.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\opentest4j\opentest4j\1.0.0-ALPHA\opentest4j-1.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\junit\junit-commons\5.0.0-ALPHA\junit-commons-5.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\junit\junit-engine-api\5.0.0-ALPHA\junit-engine-api-5.0.0-ALPHA.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\TedBa\AppData\Local\Temp\surefire9255070211573727819\surefirebooter10411505037524242747.jar C:\Users\TedBa\AppData\Local\Temp\surefire9255070211573727819 2022-02-11T10-50-49_235-jvmRun1 surefire10714760070392338736tmp surefire_01593190289816055670tmp"/>
+    <property name="sun.java.command" value="C:\Users\TedBa\AppData\Local\Temp\surefire4975985448774240367\surefirebooter14281013716438446841.jar C:\Users\TedBa\AppData\Local\Temp\surefire4975985448774240367 2022-02-11T10-25-17_438-jvmRun1 surefire4996105723636687425tmp surefire_016723657477747967231tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\test-classes;C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\classes;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\TedBa\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\TedBa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\TedBa\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\TedBa\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\TedBa\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\test-classes;C:\Users\TedBa\Documents\Revature\JavaReactAzure\target\classes;C:\Users\TedBa\.m2\repository\org\junit\junit5-engine\5.0.0-ALPHA\junit5-engine-5.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\junit\junit5-api\5.0.0-ALPHA\junit5-api-5.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\opentest4j\opentest4j\1.0.0-ALPHA\opentest4j-1.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\junit\junit-commons\5.0.0-ALPHA\junit-commons-5.0.0-ALPHA.jar;C:\Users\TedBa\.m2\repository\org\junit\junit-engine-api\5.0.0-ALPHA\junit-engine-api-5.0.0-ALPHA.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\TedBa"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\TedBa\AppData\Local\Temp\surefire9255070211573727819\surefirebooter10411505037524242747.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\TedBa\AppData\Local\Temp\surefire4975985448774240367\surefirebooter14281013716438446841.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.1+9-18"/>
@@ -55,7 +55,4 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="ContainsOneAddedAnimal" classname="AnimalTreeTest" time="0.045"/>
-  <testcase name="ContainsTwoAddedAnimal" classname="AnimalTreeTest" time="0.017"/>
-  <testcase name="DoesNotContainAnimal" classname="AnimalTreeTest" time="0.009"/>
 </testsuite>

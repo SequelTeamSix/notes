@@ -1,8 +1,7 @@
 package cookies;
 
 public class CookieArrayList {
-    //    pseudocode
-
+//    pseudocode
 //    variables needed:
 //    Array of something;
 //    The current amount of somethings;
@@ -32,9 +31,19 @@ public class CookieArrayList {
     Cookie[] cookieList = new Cookie[16];
     public Cookie get(int i){
         return cookieList[i];
+//        in a particular index in cookielist, we have a memory address
+//        pointing to a cookie object
+//        by returning a index, we can recieve the memory address into a cookie
+//        object in whatever object is calling arrayList.get();
+
+        /*
+        the reason why java may ask you to use static methods and object:
+        you're likely trying to use methods that arent actually tied to the existence
+        of a real object
+        and rather trying to call the class's methods directly
+
+        > make objects!!! <
+         */
     }
-
-
-
 
 }

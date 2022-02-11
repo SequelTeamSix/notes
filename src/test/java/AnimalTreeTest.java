@@ -1,12 +1,14 @@
-import org.junit.gen5.api.AfterEach;
-import org.junit.gen5.api.BeforeAll;
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.api.Test;
 
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import zoo.Animal;
 import zoo.AnimalTree;
+import zoo.FakeAnimalException;
 
-import static org.junit.gen5.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class AnimalTreeTest {
@@ -44,7 +46,7 @@ public class AnimalTreeTest {
 
 
     @BeforeAll
-    public void initialSetup(){
+    public static void initialSetup(){
 
     }
     @BeforeEach
@@ -57,14 +59,14 @@ public class AnimalTreeTest {
     }
 
     @Test
-    public void ContainsOneAddedAnimal(){
+    public void ContainsOneAddedAnimal() throws FakeAnimalException {
         AnimalTree<Animal> tree1 = new AnimalTree<Animal>();
         Animal a1 = new Animal("Giraffe");
         tree1.add(a1);
         assertTrue(tree1.contains(a1));
     }
     @Test
-    public void ContainsTwoAddedAnimal(){
+    public void ContainsTwoAddedAnimal() throws FakeAnimalException {
         AnimalTree<Animal> tree1 = new AnimalTree<Animal>();
         Animal a1 = new Animal("Giraffe");
         Animal a2 = new Animal("Lion");
@@ -73,7 +75,7 @@ public class AnimalTreeTest {
         assertTrue(tree1.contains(a2));
     }
     @Test
-    public void DoesNotContainAnimal(){
+    public void DoesNotContainAnimal() throws FakeAnimalException {
         AnimalTree<Animal> tree1 = new AnimalTree<Animal>();
         Animal a1 = new Animal("Giraffe");
         Animal a2 = new Animal("Lion");
