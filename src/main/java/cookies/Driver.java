@@ -14,11 +14,14 @@ everything in java's a class!
 especially objects, which are instances of classes
  */
 
+import org.apache.log4j.Logger;
+
 public class Driver {
 /*main is just the entry point for running our program
 we can put all of our code in main i guess, but this is very disorganized
  */
     public static void main(String[] args){
+        zoo.Driver.log.info("Hello");
 
         /*variables:
         basic unit of storage

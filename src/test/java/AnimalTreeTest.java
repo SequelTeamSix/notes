@@ -8,6 +8,7 @@ import zoo.Animal;
 import zoo.AnimalTree;
 import zoo.FakeAnimalException;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 

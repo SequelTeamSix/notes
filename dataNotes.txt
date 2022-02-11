@@ -1,0 +1,25 @@
+Lists - ordered lists of data
+Arraylist
+indexing is O(1)
+inserting/deleting at start is O(N) (because we need to shift all values)
+Linkedlist
+indexing is O(N)
+inserting/deleting at start is O(1)
+
+Queues - data is manipulated is a specific order (for instance, first in fist out, ie queue
+or first in last out, ie stack)
+Stack
+Arraydeque
+PriorityQueue
+
+Sets - sets of distinct values (eg distinct animals in our zootree)
+HashSet
+insertion is O(1)* (excluding collisions)
+TreeSet
+insertion is O(log(n))* (assuming it's balanced)
+
+Maps - key/value pairs - eg a dictionary has words (keys) and definitions (values)
+TreeMap
+insertion is O(log(n))* (assuming it's balanced)
+HashMap
+insertion is O(1)* (excluding collisions)

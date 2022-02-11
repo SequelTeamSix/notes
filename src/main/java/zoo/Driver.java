@@ -1,18 +1,19 @@
 package zoo;
 
 import cookies.Cookie;
-import org.apache.logging.log4j.LogManager;
 
 import java.util.ArrayList;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 public class Driver {
 
-//    private static Logger log = (Logger) LogManager.getLogger(Driver.class);
+    public static final Logger log = Logger.getLogger(Driver.class);
 
     public static void main(String[] args){
 
-//        log.info("Hello logger!");
+        log.info("Hello logger!");
 
         System.out.println("cat".compareTo("dog"));
         System.out.println("dog".compareTo("cat"));
@@ -31,7 +32,7 @@ public class Driver {
             a5 = new Animal("lion");
             a6 = new Animal("zebra");
         }catch(FakeAnimalException e){
-            System.out.println("Not real");
+            Driver.log.warn("Not real");
         }
 
         System.out.println(a1.compareTo(a2));
@@ -88,11 +89,10 @@ public class Driver {
             Animal a7 = new Animal("Bigfoot");
             tree.add(a7);
             if(tree.contains(a7)){
-                System.out.println("Bigfoot's in the zoo!");
+                Driver.log.info("Bigfoot's in the zoo!");
             }
         } catch (FakeAnimalException e) {
-            System.out.println("Not real");
-            e.printStackTrace();
+            Driver.log.warn("Not real");
         }
 
 

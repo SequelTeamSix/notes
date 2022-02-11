@@ -1,7 +1,6 @@
 package cookies;
 
 public class HyperCookie extends Cookie{
-
     private int dimensions;
     public HyperCookie(){
         dimensions = 4;

@@ -24,7 +24,7 @@ public class AnimalTree<T extends Comparable<T>> {
 //    return true if adding was successful
     public boolean add(T a){
         if(head ==null){
-            System.out.println("Added as head: "+ a);
+            Driver.log.info("Added as head: "+ a);
             head = new AnimalBranch(a);
         }else{
             AnimalBranch current = head;
@@ -33,7 +33,7 @@ public class AnimalTree<T extends Comparable<T>> {
 //                we do this by having a method that compares the new item to whatever
 //                branch we're looking at
                 if (current.getAnimal().compareTo(a) < 0) {
-                    System.out.println("Current animal: " + current + ", Branching left");
+                    Driver.log.info("Current animal: " + current + ", Branching left");
 //                    what if we need to move left, but that space is empty?
 //                    we set that new item to the new animal
 //                    we also exit out of the add method: our job is complete
@@ -49,16 +49,16 @@ public class AnimalTree<T extends Comparable<T>> {
                         current = current.left;
                     }
                 } else if (current.getAnimal().compareTo(a) > 0) {
-                    System.out.println("Current animal: " + current + "Branching right");
+                    Driver.log.info("Current animal: " + current + "Branching right");
                     if (current.right == null) {
                         current.right = new AnimalBranch(a);
-                        System.out.println("Added animal: " + a);
+                        Driver.log.info("Added animal: " + a);
                         return true;
                     } else {
                         current = current.right;
                     }
                 }else{
-                    System.out.println("Species " + a + "already exists!");
+                    Driver.log.info("Species " + a + "already exists!");
                     return false;
                 }
             }
@@ -78,12 +78,12 @@ public class AnimalTree<T extends Comparable<T>> {
 //                we do this by having a method that compares the new item to whatever
 //                branch we're looking at
                 if (current.getAnimal().compareTo(a) < 0) {
-                    System.out.println("Current animal: " + current + ", Branching left");
+                    Driver.log.info("Current animal: " + current + ", Branching left");
 //                    what if we need to move left, but that space is empty?
 //                    we set that new item to the new animal
 //                    we also exit out of the add method: our job is complete
                     if (current.left == null) {
-                        System.out.println("Animal does not exist: " + a);
+                        Driver.log.info("Animal does not exist: " + a);
                         return false;
 
                     } else {
@@ -94,16 +94,16 @@ public class AnimalTree<T extends Comparable<T>> {
                         current = current.left;
                     }
                 } else if (current.getAnimal().compareTo(a) > 0) {
-                    System.out.println("Current animal: " + current + "Branching right");
+                    Driver.log.info("Current animal: " + current + "Branching right");
                     if (current.right == null) {
                         current.right = new AnimalBranch(a);
-                        System.out.println("Animal does not exist: " + a);
+                        Driver.log.info("Animal does not exist: " + a);
                         return false;
                     } else {
                         current = current.right;
                     }
                 }else{
-                    System.out.println("Species " + a + "already exists!");
+                    Driver.log.info("Species " + a + "already exists!");
                     return true;
                 }
             }
