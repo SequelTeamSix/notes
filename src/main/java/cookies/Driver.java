@@ -16,12 +16,37 @@ especially objects, which are instances of classes
 
 import org.apache.log4j.Logger;
 
+import java.util.Scanner;
+
 public class Driver {
 /*main is just the entry point for running our program
 we can put all of our code in main i guess, but this is very disorganized
  */
     public static void main(String[] args){
         zoo.Driver.log.info("Hello");
+        boolean running = true;
+
+
+        while(running) {
+            Scanner myScanner = new Scanner(System.in);
+            String input = myScanner.nextLine();
+            System.out.println(input);
+            int intInput = Integer.parseInt(myScanner.nextLine());
+            System.out.println(intInput * intInput);
+            /*
+            search database for paintings that match 'input' to get painting
+            search database for paintings that match 'intInput' for year to get paintings
+            made in a particular year
+             */
+            /*if input is 'quit'
+            running = false
+             */
+        }
+
+//        maybe scanner gets then name of a painting
+//        that method creates a sql query that retrieves all paintings from DB,
+//        converts to POJO (plain old java object),
+//        compiles them into an arraylist that we can use for our programs logic
 
         /*variables:
         basic unit of storage

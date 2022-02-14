@@ -1,0 +1,3 @@
+2/14
+Azure
+Beginning SQL (creating tables, primary/foreign keys, inserts, basic selects and joins)

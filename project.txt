@@ -5,14 +5,24 @@ Requirements:
 Java/Maven project
 
 Employs some amount of persistence through an Azure SQL database hosted remotely by Azure
+    Any amount of persistence is fine (for instance, just saving player logs is fine)
+    In my example, I will add saving paintings which the user can then access
 Employs unit testing with high code coverage
 Employs logging
 You may not use Java's data structures like Java's built in ArrayList
+You may not use the Arrays util library
+    If you want to print or sort arrays, you'll have to make a method to do it yourself
 You must at some point use your own data structures
 It must be a command line application
     (ie you insert commands into command line as the program is running using a scanner
     and the program will output information to the console output)
 It must be user-friendly and understandable in a short 5-minute demo
+No hard-coded information
+    (for example, no saving text adventure game paths in Java, these must be obtained
+    externally)
+
+ArrayList.add("guernica");
+ArrayList.add("mona lisa");
 
 Topic:
 Anything you like, but must "do something"
