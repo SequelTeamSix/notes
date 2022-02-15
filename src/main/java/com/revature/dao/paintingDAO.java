@@ -36,6 +36,10 @@ public class paintingDAO {
         the iteration happens before vs after the line executes
          */
         ResultSet rs = statement.executeQuery();
+        /*
+        if(rs.next()) {
+            rs.beforeFirst();
+        }else*/
         while(rs.next()){
             myPainting = new Painting(rs.getInt("artist_id"),
                     rs.getString("title"),

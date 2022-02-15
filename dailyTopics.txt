@@ -3,3 +3,7 @@ Azure
 Beginning SQL (creating tables, primary/foreign keys, inserts, basic selects and joins)
 assignment: not much, just start planning your projects, plan what tables / classes you think you will need,
 continue reading revpro notes if you've got nothing in mind yet
+2/15
+JDBC (statements, preparedstatements, resultset, creating connections, properties file)
+Continuing sql (more selects, alter, join, set operations)
+assignment: quiz
