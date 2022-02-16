@@ -98,6 +98,8 @@ CREATE TABLE painting(
                          url varchar(40),
                          genre varchar(40),
                          year_made INT,
+    --cascading? allowing us to delete entries that other rows rely on by cascading
+    --to dependent entries
                          FOREIGN KEY (artist_id) REFERENCES artist(artist_id) ON DELETE CASCADE
 );
 
@@ -114,22 +116,22 @@ VALUES
 
 INSERT INTO painting (artist_id, title, url, genre, year_made)
 VALUES
-    (1, 'Composition IX', null, 'Abstract', 1939),
-    (2, 'Magic Fishes', null, 'Abstract', 1938),
-    (1, 'Gentele Ascent', null, 'Abstract', 1940),
+    (1, 'Composition IX', null, 'Abstract', 1936),
+    (2, 'Magic Fishes', null, 'Abstract', 1925),
+    (1, 'Gentle Ascent', null, 'Abstract', 1934),
     (3, 'Leaving the Psychoanalyst', null, 'Surrealist', 1960),
     (3, 'Garden of Love', null, 'Surrealist', 1965);
 select * from artist;
 
 /*Sometimes we like to say that SQL is made up of multiple 'sublanguages'
  * DDL, DQL, DML, DCL, TCL
- * DDL - creating and altering tables
- * DQL - queries
- * DML - updates
- * DCL - permissions
- * TCL - transactions/commits
+ * DDL - data definition language - creating and altering tables
+ * DQL - data query language - queries (select)
+ * DML - data manipulation language - updates
+ * DCL - data control language - permissions
+ * TCL - transaction control language - transactions/commits
  */
-
+--altering tables: changing structure of existing table
 ALTER TABLE Painting ADD painting_type varchar(40);
 select * from Painting;
 
@@ -142,41 +144,55 @@ SELECT title, name FROM (painting join artist on painting.artist_id = artist.art
 SELECT * FROM painting where title = 'Composition IX';
 
 /*aggregate queries*
- * 
+ *
  */
 SELECT avg(year_made) FROM painting;
+select sum(year_made) from painting;
 --scalar queries
 SELECT UPPER(title) as upper_title, genre from painting;
 
 SELECT * FROM PAINTING order by year_made asc;
 
+
+/*left right joins? if a table from the 'opposite side has no entries,
+ * the opposite side will have null in place of values.
+ * inner join only counts matches
+ */
 Select * from (painting left join artist on painting.artist_id = artist.artist_id);
 Select * from (painting right join artist on painting.artist_id = artist.artist_id);
 /*
  * left/right joins are particularly useful for finding null values:
  * for instance, finding cases where an artist has no paintings
- * 
+ *
  * for instance, if we have stores that carry items, it's a good way for us to find
  * if a store carries no items
  */
-
+--cross joins? get every possible combination between tables (cross product)
 Select * from (painting cross join artist);
 
+--group by? group by like values
+--as avg_year? changing name of column in select
 Select avg(year_made) as avg_year, genre from painting group by (genre);
-
+--nested query - FIRST find the average year by genre, which generates
+--some results that we then select the max from
+--as x? in nested queries we need to give inner queries an 'alias'
 Select max(avg_year)from
     (Select avg(year_made) as avg_year, genre from painting group by (genre)) as x;
+
 /*
+ * updates:
 update painting set genre = 'post-impressionism' where artist_id = 1;
 select * from painting;
 
 delete from painting where genre = 'post-impressionism';
 select * from painting;
 */
+--demonstrating cascades
 delete from artist where name  = 'Remedios Varo';
 select * from painting;
 select * from artist;
 
+--set operations
 select * from painting where year_made = 1939
 union
 select * from painting where year_made = 1940;
@@ -185,9 +201,14 @@ select * from painting
 except
 select * from painting where year_made = 1940;
 
-(select top 2 * from painting order by year_made asc)
-except
-(select top 1 * from painting order by year_made asc);
+--finding a way to get the second largest item
+/*
+select top 2 * from painting order by year_made
+union
+select top 1 * from painting order by year_made;
+*/
+
+select top 1 * from (select * from painting where year_made<max(year_made)) ;
 
 
 /*
