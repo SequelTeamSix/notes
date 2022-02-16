@@ -23,6 +23,13 @@ public class paintingDAO {
     not really - but they are considered best practice
      */
 
+    public paintingDAO(){
+        this(1);
+    }
+    public paintingDAO(int i){
+        System.out.println("making constructor "+i);
+    }
+
     public List<Painting> getAllPaintings() {
         return null;
     }

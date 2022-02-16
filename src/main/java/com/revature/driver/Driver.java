@@ -8,14 +8,36 @@ import com.revature.util.ConnectionUtil;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayDeque;
 import java.util.List;
 
-public class Driver {
+public final class Driver {
     public static Connection conn = ConnectionUtil.getConnection();
-    public static void main(String[] args){
+    public static void main(String[] args) throws SQLException {
         artistDAO artistdao = new artistDAO();
         paintingDAO paintingdao = new paintingDAO();
 
+        String[] b = {"a", "b", "c"};
+
+
+        conn.setAutoCommit(true);
+        /*
+        conn.setAutoCommit(false);
+        conn.commit();
+
+        why not autocommit?
+        let's say we're inserting an artist followed by all their paintings
+        to the DB -
+        but for some reason our program / computer crashes halfway through inserting the
+        paintings:
+        it becomes difficult for us to know how information we're missing or has been lost
+
+        this is a case where we need atomicity:
+        either all transactions are completed, or all transactions fail
+
+
+
+         */
         try {
             List<Artist> allArtists = artistdao.getAllArtists();
             for(Artist A : allArtists){
