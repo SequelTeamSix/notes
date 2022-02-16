@@ -93,6 +93,7 @@ CREATE TABLE artist(
 );
 
 CREATE TABLE painting(
+                         painting_id int,
                          artist_id int,
                          title varchar(40),
                          url varchar(40),
@@ -102,6 +103,66 @@ CREATE TABLE painting(
     --to dependent entries
                          FOREIGN KEY (artist_id) REFERENCES artist(artist_id) ON DELETE CASCADE
 );
+
+--let's say we want to have a table that store every exhibition of a painting-
+--ie a painting may be shown at many museums, but a museum
+--shows many paintings
+--to resolve a many-to-many relationship, we need an intermediate table
+
+CREATE TABLE exhibition(
+                           exhibition_id int,
+                           painting_id int,
+                           museum_id int,
+                           FOREIGN KEY(painting_id) references painting(painting_id),
+                           FOREIGN KEY(museum_id) references museum(museum_id),
+);
+
+CREATE TABLE museum(
+                       name varchar(40),
+                       museum_id int primary key
+);
+
+/*normalization is all about maintaining dependencies while reducing redundancy
+ * artist table that contains an array containing all of their paintings
+ * 1st normal form: all columns must be 'atomic' (meaning that they contain
+ * single values), and must contain a primary key
+ * in order to achieve, 1nf, the artist table mentioned must split up into
+ * multiple rows of the same table, such that all of the items in the paintings column
+ * are a single row
+ *
+ * 		not normalized at all: remedios varo, [p1, p2, p3]'
+ *		(why is this bad? what if we want to search by painting?)
+ * 		solution:
+ * 		1nf: remedios varo, p1
+ * 			remedios varo, p2
+ *
+ * 2nf: cannot have columns that are dependent on only one part of the key (partial dependencies)
+ * not in 2nf:
+ * pkey(remedios varo, painting1), title
+ * pkey(remedios varo, painting2), title
+ * (why is this bad? these would be more efficiently spread across tables)
+ * solution:
+ * artist: remedios varo
+ * painting: painting1, title1
+ * painting: painting2, title2
+ *
+ * 3nf: no transitive dependencies
+ * artist: remedios varo, salutationID, mrs
+ * artist: leonara carrington, salutationID, ms
+ * artist: pablo picass, salutationID, mr
+ * artist: wassily kandinsky, salutationID, mr
+ * (why is this bad? if we change a salutation, we need to change both ms and salutationID)
+ *
+ * artist: remedios varo, salutationID (1)
+ * artist: leonara carrington, salutationID (1) (2-> if leonara gets married)
+ *
+ * salutationID: 1, mrs
+ * salutationID: 2, ms
+ *
+ * the lesson: redundancy is BAD, we want to always be reducing redundancy,
+ * and dependencies are GOOD
+ *
+ */
 
 INSERT INTO artist (name)
 VALUES
@@ -121,6 +182,11 @@ VALUES
     (1, 'Gentle Ascent', null, 'Abstract', 1934),
     (3, 'Leaving the Psychoanalyst', null, 'Surrealist', 1960),
     (3, 'Garden of Love', null, 'Surrealist', 1965);
+select * from artist;
+
+INSERT INTO painting (artist_id, title, url, genre, year_made)
+VALUES
+    (1, 'Composition X', null, 'Abstract', 2000);
 select * from artist;
 
 /*Sometimes we like to say that SQL is made up of multiple 'sublanguages'
@@ -208,24 +274,63 @@ union
 select top 1 * from painting order by year_made;
 */
 
-select top 1 * from (select * from painting where year_made<max(year_made)) ;
+--select top 1 * from (select * from painting where year_made<max(year_made));
+
+--INDEXES
+create index yearGenreIndex on painting (year_made, genre);
+/*creating a virtual registry within sql of the order of all items in the table
+ * provided this 'key'
+ * why?
+ * it makes similar queries on this group much faster, particularly if we need large sets of the
+ * table
+ * in a situation where we are constantly searching for genre and year made simultaneously,
+ * it's advantageous for us to create an index on them
+ *
+ * indexes/ clustered indexes - indexes are 'virtual' (a registry),
+ * clustered indexes are physical (change the physical ordering)
+ * by default, the primary key
+ *
+ * create clustered index yearGenreIndex on painting (year_made, genre);
+ *
+ * we can force an index to be used, but we can only really see speedup by measuring ourselves
+ *
+ */
+
+select max(year_made), genre from painting group by genre;
+
+create view lastYearForGennre as
+select max(year_made) as maxYear, genre from painting group by genre;
+
+select * from lastYearForGennre;
+/*what is a materialized view?
+ * unlike views, which are updated dynamically, materialized views are a query
+ * set in stone: meaning that it is a snapshot of a query at a particular point in time
+ *
+ * create materialized-view lastYearForGenreMaterialized2 as
+select max(year_made) as maxYear, genre from painting group by genre;
+ *
+ */
+
+
+
+
 
 
 /*
  * text adventure game
  * certain amount of rooms?
  * turns?
- * 
- * 
+ *
+ *
  * rpg video game?
  * creator
  * maintain a db table with all of the abilities you can pick
  * add functionality for user to select from list, which perhaps adds to
  * an object in java which contains all abilities
- * 
+ *
  * dungeon rpg?
  * levelling up
- * 
+ *
  * zombie killer?
  * backpack with items
  * zombie fighter?
@@ -233,12 +338,12 @@ select top 1 * from (select * from painting where year_made<max(year_made)) ;
  * 	functionality to select an item (which is presented as list from db)
  * 	functionality to select a zombie (list from db)
  *  test fight
- * 
+ *
  * content selector?
  * inputs: how much time
  * desired mood
  * return series of things to watch
- * 
+ *
  * math scavenger hunt?
  * for every math problem correct
  * recieve item from list
@@ -246,8 +351,43 @@ select top 1 * from (select * from painting where year_made<max(year_made)) ;
  * 		problems
  * 		correct answer
  * 		id of reward
- * 
- *  
+ *
+ *
+ */
+
+/*
+ * ACID properties:
+ * Atomicity
+  		either all transactions are completed, or all transactions fail
+ * Consistency
+ * 		all constrains are met at all times
+ * 		for instance, primary/foreign key, not null, check
+ * 		checks?
+ * 			we can mandate that some conditional is always met:
+ * 			like we can say check(year_made < 2023)
+ * Isolation
+ * 		unrelated transactions do not affect each other
+ * 		transactions are separate changes from each other
+ * Durability
+ * 		our program is resistent to crashes and likely maintains backups,
+ * 		and stores unfinished transactions
+ *
+ * ACID properties, on top of efficiency, are really the real reason we're interested
+ * in SQL
+ *
+ * meaning, we've progressed greatly over eg modifying a .csv file instead
+ *
+ *
+ * if you're interested in going deeper into sql:
+ * 	consider procedures, functions,
+ * 			(basically methods)
+ * triggers
+ * 			(automatically call a procedure/function when something happens,
+ * 			like adding a value)
+ * erd
+ * 			(planning, diagramming)
+ * nosql
+ * (only if you're super interested, no one should be asking you about these things)
  */
 
 
