@@ -14,11 +14,9 @@ import java.util.List;
 public final class Driver {
     public static Connection conn = ConnectionUtil.getConnection();
     public static void main(String[] args) throws SQLException {
+
         artistDAO artistdao = new artistDAO();
         paintingDAO paintingdao = new paintingDAO();
-
-        String[] b = {"a", "b", "c"};
-
 
         conn.setAutoCommit(true);
         /*

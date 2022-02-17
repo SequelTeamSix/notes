@@ -2,12 +2,12 @@ package cookies;
 
 public class CookieList {
 
-    CookieChain head;
+    private CookieChain head;
+
 
     public CookieList(){
 
     }
-
     public void addCookie(Cookie c){
 
 //         1. we make the new link in the cookiechain point to the current head

@@ -18,11 +18,26 @@ import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
+
+
 public class Driver {
 /*main is just the entry point for running our program
 we can put all of our code in main i guess, but this is very disorganized
  */
-    public static void main(String[] args){
+
+    /*
+    scopes: ability to access a variable within a class
+        static/class
+        object/instance
+        method
+        block
+    access modifiers: ability to access variables between classes
+        public
+        default
+        protected
+        private
+     */
+public static void main(String[] args){
         zoo.Driver.log.info("Hello");
         boolean running = true;
 
@@ -238,6 +253,9 @@ we can put all of our code in main i guess, but this is very disorganized
         myList.traverseCookies();
 
 
+        if(true){
+            int i = 0;
+        }
 
         Object[] myObjects = new Object[16];
 

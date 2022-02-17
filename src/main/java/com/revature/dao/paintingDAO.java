@@ -1,17 +1,15 @@
 package com.revature.dao;
 import com.revature.model.Artist;
 import com.revature.model.Painting;
+import com.revature.util.ConnectionUtil;
 /*whats list?
 list is an interface that arraylist and linkedlist implement
  */
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.revature.driver.Driver.conn;
+import static com.revature.util.ConnectionUtil.getConnection;
 
 public class paintingDAO {
     /*
@@ -22,14 +20,12 @@ public class paintingDAO {
     are DAOs necessary?
     not really - but they are considered best practice
      */
+    Connection conn;
 
     public paintingDAO(){
-        this(1);
-    }
-    public paintingDAO(int i){
-        System.out.println("making constructor "+i);
-    }
 
+        conn = ConnectionUtil.getConnection();
+    }
     public List<Painting> getAllPaintings() {
         return null;
     }

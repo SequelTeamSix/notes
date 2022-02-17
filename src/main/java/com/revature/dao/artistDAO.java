@@ -1,15 +1,20 @@
 package com.revature.dao;
 import com.revature.model.Artist;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.revature.driver.Driver.conn;
+import com.revature.util.ConnectionUtil;
 
 public class artistDAO {
+    Connection conn;
+    public artistDAO(){
+        conn = ConnectionUtil.getConnection();
+    }
 
     public List<Artist> getAllArtists() throws SQLException {
         List<Artist> allArtists = new ArrayList<Artist>();
