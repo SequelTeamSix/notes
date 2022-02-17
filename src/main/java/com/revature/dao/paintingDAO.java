@@ -6,10 +6,7 @@ import com.revature.util.ConnectionUtil;
 list is an interface that arraylist and linkedlist implement
  */
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
-
-import static com.revature.util.ConnectionUtil.getConnection;
 
 public class paintingDAO {
     /*
