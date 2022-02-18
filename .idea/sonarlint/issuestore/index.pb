@@ -13,7 +13,5 @@ V
 &src/main/java/cookies/HyperCookie.java,1\9\19e2614e34177cf40c8b052666e35afc019475bb
 ;
 project.txt,1\3\13b3556077fd6ec3a2c338c629d9735bb5df3847
-?
-dailyTopics.txt,d\e\de4389e05247e4b5fec386b39b06c0591e10ddc9
 c
 3src/main/java/com/revature/util/ConnectionUtil.java,8\f\8f9742be3e6170e843a3a3e659a612b0506c253e
