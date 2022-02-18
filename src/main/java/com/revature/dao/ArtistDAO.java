@@ -10,9 +10,9 @@ import java.util.List;
 
 import com.revature.util.ConnectionUtil;
 
-public class artistDAO {
+public class ArtistDAO {
     Connection conn;
-    public artistDAO(){
+    public ArtistDAO(){
         conn = ConnectionUtil.getConnection();
     }
 

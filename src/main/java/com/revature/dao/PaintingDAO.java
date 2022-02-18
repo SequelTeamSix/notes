@@ -1,5 +1,4 @@
 package com.revature.dao;
-import com.revature.model.Artist;
 import com.revature.model.Painting;
 import com.revature.util.ConnectionUtil;
 /*whats list?
@@ -8,7 +7,7 @@ list is an interface that arraylist and linkedlist implement
 import java.sql.*;
 import java.util.List;
 
-public class paintingDAO {
+public class PaintingDAO {
     /*
     what is a DAO?
     DAO stands for Data Access Object
@@ -18,10 +17,11 @@ public class paintingDAO {
     not really - but they are considered best practice
      */
     Connection conn;
-
-    public paintingDAO(){
-
+    public PaintingDAO(){
         conn = ConnectionUtil.getConnection();
+    }
+    public PaintingDAO(Connection conn){
+        this.conn = conn;
     }
     public List<Painting> getAllPaintings() {
         return null;

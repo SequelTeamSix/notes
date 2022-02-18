@@ -1,5 +1,7 @@
 package com.revature.model;
 
+import java.util.Objects;
+
 public class Painting {
     private int artist_id;
     private String title;
@@ -64,5 +66,18 @@ public class Painting {
                 ", genre='" + genre + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Painting painting = (Painting) o;
+        return artist_id == painting.artist_id && year == painting.year && Objects.equals(title, painting.title) && Objects.equals(url, painting.url) && Objects.equals(genre, painting.genre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(artist_id, title, url, genre, year);
     }
 }
