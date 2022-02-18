@@ -83,3 +83,10 @@ how do i find the brand name of a particular item
 select * from brand join item on brand.brand_id = item.item_id;
 
 
+let's say I want to to combine two resultsets:
+one for the items with brand id 1,
+and one for the items with brand id 3
+
+select * from items where brand_id=1
+union
+select * from items where brand_id=3;
