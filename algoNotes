@@ -1,0 +1,85 @@
+POJO - plain old java object
+DAO - data access object - manages the association between POJO's and the database
+Service Layer - 'business logic' handled by java
+Model - POJO's corresponding to database data
+Util - Usually a place for
+    singletons - Classes managing single objects
+    factories - Classes managing the generation of new objects
+Controller - Web communication handler
+Views - refer to front-end visualizations of our application (for now we can say that our console is
+    kind of a 'view'
+
+Algorithms
+What's an algorithm?
+A process for doing things (usually math)
+Big O Notation is for worst case:
+
+O(1)*
+--O(log(log(n)))
+O(log(n))*
+--O(log(n^2))
+O(nlog(n))*
+O(n)*
+O(n^2)*
+--O(n^3)
+O(2^n)*
+O(n!)*
+
+
+O(n/2)
+O(.00001*n^2)
+O(n/2) will outperform O(.00001*n^2) given a large enough N: Complexity is all about scaling to larger amounts of data
+
+O(n-100000000) converges to O(n)
+
+                Insertion at end   Insertion at beginning   Insertion   binary search  Sort                                     linear search   Retrieval
+BST (assuming balanced n/a                 n/a               O(log(n))  O(log(n))        n/a                                    n/a             n/a
+ArrayList           O(1)*                   O(n)             n/a        O(log(n))        best case nlog(n), selection is n^2    O(n)            n/a
+LinkedList          O(n)                    O(1)             n/a        n/a              x                                      O(n)            n/a
+Hash                n/a                     n/a              O(1)*      n/a              n/a                                    n/a             O(1)
+
+Selection sort:
+We maintain a minimum search index, starting at 0
+for each item in the array array:{
+    using a for loop traversal:{
+        we find the minimum value *after* the minimum index
+        after traveral, we swap the minimum with what is contained in the minimum index
+        we increment the minimum index
+    }
+}
+what does this lead to?
+the section of the array that is sorted 'grows' from the beginning of the array, because we are finding
+the value that belongs in a particular spot, starting at 0
+O(n^2)
+
+sql review:
+
+brand
+item
+store
+purchase
+customer
+
+a customer can own many items
+many stores can carry many brands
+create a new table to serve as an intermediary that keeps track of what stores and carrying what?
+let's say we have a 'carrying' table
+
+fkey to brand
+fkey to store
+
+let's say an item has a column for prices
+a sql query to return all items below a certain price?
+
+aggregate functions
+select avg(price) from item
+
+scalar functions?
+
+let's say within item I have a brand id but no brand name-
+within the brand table i have brand id and brand name-
+how do i find the brand name of a particular item
+
+select * from brand join item on brand.brand_id = item.item_id;
+
+

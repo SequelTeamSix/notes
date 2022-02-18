@@ -126,16 +126,16 @@ CREATE TABLE museum(
  * artist table that contains an array containing all of their paintings
  * 1st normal form: all columns must be 'atomic' (meaning that they contain
  * single values), and must contain a primary key
- * in order to achieve, 1nf, the artist table mentioned must split up into
+ * in order to achieve, 1nf, the artist table mentioned must split up into 
  * multiple rows of the same table, such that all of the items in the paintings column
  * are a single row
- *
+ * 
  * 		not normalized at all: remedios varo, [p1, p2, p3]'
  *		(why is this bad? what if we want to search by painting?)
  * 		solution:
  * 		1nf: remedios varo, p1
  * 			remedios varo, p2
- *
+ * 
  * 2nf: cannot have columns that are dependent on only one part of the key (partial dependencies)
  * not in 2nf:
  * pkey(remedios varo, painting1), title
@@ -145,23 +145,23 @@ CREATE TABLE museum(
  * artist: remedios varo
  * painting: painting1, title1
  * painting: painting2, title2
- *
+ * 
  * 3nf: no transitive dependencies
  * artist: remedios varo, salutationID, mrs
  * artist: leonara carrington, salutationID, ms
  * artist: pablo picass, salutationID, mr
  * artist: wassily kandinsky, salutationID, mr
  * (why is this bad? if we change a salutation, we need to change both ms and salutationID)
- *
+ * 
  * artist: remedios varo, salutationID (1)
  * artist: leonara carrington, salutationID (1) (2-> if leonara gets married)
- *
+ * 
  * salutationID: 1, mrs
  * salutationID: 2, ms
- *
+ * 
  * the lesson: redundancy is BAD, we want to always be reducing redundancy,
  * and dependencies are GOOD
- *
+ * 
  */
 
 INSERT INTO artist (name)
@@ -210,7 +210,7 @@ SELECT title, name FROM (painting join artist on painting.artist_id = artist.art
 SELECT * FROM painting where title = 'Composition IX';
 
 /*aggregate queries*
- *
+ * 
  */
 SELECT avg(year_made) FROM painting;
 select sum(year_made) from painting;
@@ -229,7 +229,7 @@ Select * from (painting right join artist on painting.artist_id = artist.artist_
 /*
  * left/right joins are particularly useful for finding null values:
  * for instance, finding cases where an artist has no paintings
- *
+ * 
  * for instance, if we have stores that carry items, it's a good way for us to find
  * if a store carries no items
  */
@@ -237,7 +237,7 @@ Select * from (painting right join artist on painting.artist_id = artist.artist_
 Select * from (painting cross join artist);
 
 --group by? group by like values
---as avg_year? changing name of column in select
+--as avg_year? changing name of column in select 
 Select avg(year_made) as avg_year, genre from painting group by (genre);
 --nested query - FIRST find the average year by genre, which generates
 --some results that we then select the max from
@@ -270,8 +270,8 @@ select * from painting where year_made = 1940;
 --finding a way to get the second largest item
 /*
 select top 2 * from painting order by year_made
-union
-select top 1 * from painting order by year_made;
+minus
+select top 1 * from painting order by year_made as x;
 */
 
 --select top 1 * from (select * from painting where year_made<max(year_made));
@@ -285,15 +285,15 @@ create index yearGenreIndex on painting (year_made, genre);
  * table
  * in a situation where we are constantly searching for genre and year made simultaneously,
  * it's advantageous for us to create an index on them
- *
+ * 
  * indexes/ clustered indexes - indexes are 'virtual' (a registry),
  * clustered indexes are physical (change the physical ordering)
  * by default, the primary key
- *
+ * 
  * create clustered index yearGenreIndex on painting (year_made, genre);
- *
+ * 
  * we can force an index to be used, but we can only really see speedup by measuring ourselves
- *
+ * 
  */
 
 select max(year_made), genre from painting group by genre;
@@ -305,32 +305,35 @@ select * from lastYearForGennre;
 /*what is a materialized view?
  * unlike views, which are updated dynamically, materialized views are a query
  * set in stone: meaning that it is a snapshot of a query at a particular point in time
- *
+ * 
  * create materialized-view lastYearForGenreMaterialized2 as
 select max(year_made) as maxYear, genre from painting group by genre;
- *
+ * 
  */
 
+--finding the second highest year_made
 
-
-
+select max(year_made)
+from
+    (select year_made from
+        painting except select max(year_made) as year_made from painting) as x;
 
 
 /*
  * text adventure game
  * certain amount of rooms?
  * turns?
- *
- *
+ * 
+ * 
  * rpg video game?
  * creator
  * maintain a db table with all of the abilities you can pick
  * add functionality for user to select from list, which perhaps adds to
  * an object in java which contains all abilities
- *
+ * 
  * dungeon rpg?
  * levelling up
- *
+ * 
  * zombie killer?
  * backpack with items
  * zombie fighter?
@@ -338,12 +341,12 @@ select max(year_made) as maxYear, genre from painting group by genre;
  * 	functionality to select an item (which is presented as list from db)
  * 	functionality to select a zombie (list from db)
  *  test fight
- *
+ * 
  * content selector?
  * inputs: how much time
  * desired mood
  * return series of things to watch
- *
+ * 
  * math scavenger hunt?
  * for every math problem correct
  * recieve item from list
@@ -351,8 +354,8 @@ select max(year_made) as maxYear, genre from painting group by genre;
  * 		problems
  * 		correct answer
  * 		id of reward
- *
- *
+ * 
+ *  
  */
 
 /*
@@ -371,15 +374,15 @@ select max(year_made) as maxYear, genre from painting group by genre;
  * Durability
  * 		our program is resistent to crashes and likely maintains backups,
  * 		and stores unfinished transactions
- *
+ * 
  * ACID properties, on top of efficiency, are really the real reason we're interested
  * in SQL
- *
+ * 
  * meaning, we've progressed greatly over eg modifying a .csv file instead
- *
- *
+ * 
+ * 
  * if you're interested in going deeper into sql:
- * 	consider procedures, functions,
+ * 	consider procedures, functions, 
  * 			(basically methods)
  * triggers
  * 			(automatically call a procedure/function when something happens,
