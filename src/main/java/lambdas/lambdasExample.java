@@ -33,9 +33,6 @@ public class lambdasExample {
         name.add("max");
 
 
-        double result = Math.random();
-        double result2 = random.getRandom();
-
 
         /*whats a consumer?
         a consumer... consumes things
