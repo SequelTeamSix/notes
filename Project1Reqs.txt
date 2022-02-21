@@ -1,0 +1,10 @@
+Project 1:
+Likely due March 9th
+
+You may use Java's collections implementations
+Must be a REST api that employs a front-controller/MVC architecture
+Must employ an ORM (hibernate, spring orm) instead of JDBC
+Must implement CRUD (create-read-update-delete) functionality for database
+
+Debating:
+Must be deployed on an azure VM (depending on how fast I can get to this)

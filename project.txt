@@ -17,7 +17,7 @@ It must be a command line application
     (ie you insert commands into command line as the program is running using a scanner
     and the program will output information to the console output)
 It must be user-friendly and understandable in a short 5-minute demo
-No hard-coded information
+No hard-coded information in java
     (for example, no saving text adventure game paths in Java, these must be obtained
     externally)
 

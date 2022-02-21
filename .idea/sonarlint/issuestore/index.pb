@@ -11,8 +11,6 @@ Z
 *src/main/java/zoo/FakeAnimalException.java,3\6\367f004c25b2959cfdbaa2ce0e5663a180b016e1
 V
 &src/main/java/cookies/HyperCookie.java,1\9\19e2614e34177cf40c8b052666e35afc019475bb
-;
-project.txt,1\3\13b3556077fd6ec3a2c338c629d9735bb5df3847
 c
 3src/main/java/com/revature/util/ConnectionUtil.java,8\f\8f9742be3e6170e843a3a3e659a612b0506c253e
 Z
