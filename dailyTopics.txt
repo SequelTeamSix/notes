@@ -12,6 +12,6 @@ More SQL (Joins, set operations, aggregates, scalars, ACID, multiplicity, normal
 assignmnet: qc study
 2/17
 1-on-1s
-2/17
+2/18
 Mockito, Search & Sorting algorithms, Time Complexity, SQL Review
 Assignment: review SQL

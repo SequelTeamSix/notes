@@ -1,0 +1,64 @@
+
+X
+java:S1854z"CRemove this useless assignment to local variable "changeThisToInt".(†µ¡&
+W
+java:S1854_"<Remove this useless assignment to local variable "myDouble".(Ô€½æúÿÿÿÿ
+P
+java:S1854^":Remove this useless assignment to local variable "myLong".(£ÖÒ
+Q
+java:S1854\";Remove this useless assignment to local variable "myFloat".(®ãòÌ
+T
+java:S1854Z"9Remove this useless assignment to local variable "myInt".(”ƒ­ ùÿÿÿÿ
+P
+java:S1854X":Remove this useless assignment to local variable "myChar".(©ãèá
+P
+java:S1854W"5Remove this useless assignment to local variable "s".(èòªøÿÿÿÿ
+U
+java:S1854U":Remove this useless assignment to local variable "myByte".(úÒµ¢úÿÿÿÿ
+[
+java:S1854‰"?Remove this useless assignment to local variable "myScopedInt".(¼§§¤üÿÿÿÿ
+U
+java:S1854Ú"9Remove this useless assignment to local variable "myInt".(›èÜóúÿÿÿÿ
+T
+java:S1854¶"=Remove this useless assignment to local variable "myBoolean".(¨¨¿Î
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(ºª¬·ûÿÿÿÿ
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(±øóú
+V	java:S125L"<This block of commented-out lines of code should be removed.(Áú÷Ùùÿÿÿÿ
+F
+java:S1481U"+Remove this unused "myByte" local variable.(úÒµ¢úÿÿÿÿ
+A
+java:S1481W"&Remove this unused "s" local variable.(èòªøÿÿÿÿ
+A
+java:S1481X"+Remove this unused "myChar" local variable.(©ãèá
+E
+java:S1481Z"*Remove this unused "myInt" local variable.(”ƒ­ ùÿÿÿÿ
+B
+java:S1481\",Remove this unused "myFloat" local variable.(®ãòÌ
+A
+java:S1481^"+Remove this unused "myLong" local variable.(£ÖÒ
+H
+java:S1481_"-Remove this unused "myDouble" local variable.(Ô€½æúÿÿÿÿ
+I
+java:S1481z"4Remove this unused "changeThisToInt" local variable.(†µ¡&
+q
+java:S3923"[Remove this conditional structure or edit its code blocks so that they're not all the same.(øé¸ö
+V	java:S125}"<This block of commented-out lines of code should be removed.(ý’á—þÿÿÿÿ
+?	java:S108")Either remove or fill this block of code.(ÆÉÍë
+?	java:S108ƒ")Either remove or fill this block of code.(å¥ž‡
+G
+java:S1481ˆ"0Remove this unused "myScopedInt" local variable.(Žÿ½þ
+W	java:S125Ž"<This block of commented-out lines of code should be removed.(Ÿ¦ùŠÿÿÿÿÿ
+W	java:S125‘"<This block of commented-out lines of code should be removed.(éñùÿÿÿÿ
+D	java:S108")Either remove or fill this block of code.(ü§è½ùÿÿÿÿ
+R	java:S125Ë"<This block of commented-out lines of code should be removed.(öÎ×Ò
+R	java:S125õ"<This block of commented-out lines of code should be removed.(â¬üÄ
+I
+java:S1481"&Remove this unused "i" local variable.(ùó›Ìøÿÿÿÿ8›¯€Íð/
+O	java:S106‰"9Replace this use of System.out or System.err by a logger.(Óží
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(šÊþþÿÿÿÿ
+P
+java:S1128"4Remove this unused import 'org.apache.log4j.Logger'.(ñè½8½öìêð/
+8
+java:S2189-""Add an end condition to this loop.(›ûÅò
+M
+java:S2589-"7Remove this expression which always evaluates to "true"(›ûÅò
