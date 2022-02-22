@@ -1,0 +1,27 @@
+programiz.com/dsa/algorithm
+
+(Work on these if you don't have an idea of what else to do)
+
+Data Structures/Algorithms you will most likely need to know:
+
+Data Structures - algorithmic ways to store data
+Algorithms - process for doing operations that solves a particular goal
+
+DS:
+(you should know things like insertion at beginning/end, deletion, searches,
+traversal of all elements when applicable)
+Binary Tree (including traversal)
+Linked List
+Array List
+All types of queue (queue, stack, arraydeque)
+Hash table (set/map)
+
+Algorithms:
+You should know:
+The basic sorts (Bubble, Selection, Insertion)
+Merge Sort
+Linear search
+Binary search
+Depth-first search
+
+At the end I'd like to mention some other algorithms like Dijkstra's/graph search

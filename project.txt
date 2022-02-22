@@ -41,3 +41,10 @@ Anything you like, but must "do something"
        Anything you like! So long as it fits other requirements
 
        I believe that learning should a guided exploratory process
+
+Java CLI
+Junit tests
+Logging
+Persistence with Azure sql
+No hard-coded data in Java
+Must use own data structures (No Java Collections or Arrays util library)
