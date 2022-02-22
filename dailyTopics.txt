@@ -19,3 +19,6 @@ Assignment: review SQL
 2/21
 Threading, lambdas, streams
 Assignment: download tomcat https://tomcat.apache.org/download-90.cgi (unzip to a location you remember)
+
+2/22
+REST, selection sort implementation, binary search implementation

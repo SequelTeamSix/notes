@@ -11,8 +11,6 @@ Z
 *src/main/java/zoo/FakeAnimalException.java,3\6\367f004c25b2959cfdbaa2ce0e5663a180b016e1
 V
 &src/main/java/cookies/HyperCookie.java,1\9\19e2614e34177cf40c8b052666e35afc019475bb
-c
-3src/main/java/com/revature/util/ConnectionUtil.java,8\f\8f9742be3e6170e843a3a3e659a612b0506c253e
 Z
 *src/main/java/cookies/CookieArrayList.java,e\b\eb4fe107887fdb7c53f7795c9f6dbf03cde58c90
 Q
@@ -31,8 +29,6 @@ P
 ,src/main/java/com/revature/model/Artist.java,4\9\493d63a642944a0e02570d24ac6ef9e5fb904c66
 V
 &src/test/java/PaintingServiceTest.java,5\d\5d50b85b87f2dbbc34ddcaee92eaaf163b4450a4
-]
--src/main/java/com/revature/driver/Driver.java,9\c\9cc8c822c7c45967620c16d6f334e0ea9c904833
 ^
 .src/main/java/com/revature/model/Painting.java,8\8\886885b5898faf7591d1295e5f47e44005b6a465
 e
