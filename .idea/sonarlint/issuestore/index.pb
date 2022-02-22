@@ -29,8 +29,6 @@ P
  src/test/java/ArrayListTest.java,3\3\33e46cd61e66fdd4921981460b83b45480f4c7b2
 \
 ,src/main/java/com/revature/model/Artist.java,4\9\493d63a642944a0e02570d24ac6ef9e5fb904c66
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 V
 &src/test/java/PaintingServiceTest.java,5\d\5d50b85b87f2dbbc34ddcaee92eaaf163b4450a4
 ]
