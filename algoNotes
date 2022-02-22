@@ -43,7 +43,7 @@ We maintain a minimum search index, starting at 0
 for each item in the array array:{
     using a for loop traversal:{
         we find the minimum value *after* the minimum index
-        after traveral, we swap the minimum with what is contained in the minimum index
+        after traversal, we swap the minimum with what is contained in the minimum index
         we increment the minimum index
     }
 }
@@ -51,6 +51,28 @@ what does this lead to?
 the section of the array that is sorted 'grows' from the beginning of the array, because we are finding
 the value that belongs in a particular spot, starting at 0
 O(n^2)
+
+Algorithm considerations:
+searching:
+is it sorted?
+    if yes, binary
+    if no, linear traversal
+sorting:
+    some algorithms are better at partially sorted arrays
+        selection, insertion
+    some algorithms do or do not require additional memory to be allocated
+        yes: quick, bubble, selection, insertion
+        no: merge
+    algorithm stability: does an algo preserve original order of equal elements?
+        yes: bubble, insertion, merge, count
+        no: radix, quick, heap, selection
+
+    partially sorted:
+    {1, 2, 3, 4, 6, 5}
+    (eg a leaderboard has shifted slightly from a single game out of many
+    unsorted:
+    {6, 3, 2, 5, 1, 4}
+    (eg we are given an alphabetical list of player names and need to sort hit percentage)
 
 sql review:
 
@@ -90,3 +112,59 @@ and one for the items with brand id 3
 select * from items where brand_id=1
 union
 select * from items where brand_id=3;
+
+
+
+
+
+store table:
+pkey: store id
+name varchar
+
+item table
+pkey: item id
+fkey: brand id
+item_name
+price
+
+brand table:
+pkey: brand id
+brand_name
+
+cutomer table
+pkey: customer
+fkey: favorte store
+
+let's say that many stores can carry many items
+how do i manage this relationship?
+make a new table that is an intermediary
+
+carrying table
+fkey (item id) integer
+fkey (store id) integer
+
+how do i find all items with brand name "abc"?
+select * from (brand join items on brand.brandid = item.brandid) where brand.name = "abc";
+
+how do i find the average price of all items?
+select avg(price) from item
+
+how do i find the average price of the items of each brand id?
+select avg(price) from item group by brand id
+
+how do i select the average price of items of each brand id, and together with brand_name in query?
+SELECT AVG(i.price), b.name FROM item i JOIN brand b ON i.brand_id = b.id GROUP BY i.brand_id;
+
+how do i get the count of how many items are carried by a store "xyz"?
+select count(distinct(item id)) from (carrying join store on carrying.storeid = store.storeid) where store.name = "xyz"
+
+select max(price) from item
+
+how do we get the second max item?
+
+select max(year_made)
+	from
+	(select year_made from
+		painting except select max(year_made) as year_made from painting) as x;
+
+IE: choose the maximum (which will be second maximum) from the set of results minus the maximum

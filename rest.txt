@@ -1,0 +1,34 @@
+REST?
+Rest is one standard for communicating on the web:
+it stands for Representation State Transfer
+What are its doctrines?
+    client-server architecture made of clients, servers, resources
+    requests managed through HTTP
+
+    stateless: meaning no client information is stored between requests, and
+    each request is separate
+
+    cacheable data
+
+    uniform interface
+
+        resources are indentifiable and separate from the representations sent to the client
+
+        resources can be manipulate via the representation recieved because the representation contains
+        enough data to do so
+
+        descriptive messages returned to client have enough information to describe how client should process it
+
+    that's most of the official definition from Red Hat -
+    but for the most part, REST is about transferring data through JSON format
+
+    what's JSON?
+        Javascript object notation
+            it really has little to do with javascript, but it is a convenient way to store objects
+            for instance, a painting object:
+            {
+                painterID: #,
+                title: "title",
+                genre: "genre"
+            }
+    let's try it out... hope it works

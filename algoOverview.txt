@@ -23,5 +23,6 @@ Merge Sort
 Linear search
 Binary search
 Depth-first search
+Breadth-first search
 
 At the end I'd like to mention some other algorithms like Dijkstra's/graph search
