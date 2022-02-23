@@ -1,4 +1,4 @@
-package rest.resource;
+/*package rest.resource;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
@@ -15,3 +15,4 @@ public class ExampleResource {
         return things;
     }
 }
+*/
