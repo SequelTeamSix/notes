@@ -31,8 +31,6 @@ V
 &src/test/java/PaintingServiceTest.java,5\d\5d50b85b87f2dbbc34ddcaee92eaaf163b4450a4
 ^
 .src/main/java/com/revature/model/Painting.java,8\8\886885b5898faf7591d1295e5f47e44005b6a465
-e
-5src/main/java/com/revature/service/ArtistService.java,e\d\ed6273431d38bf3e02b7b6cf48c64180a9414cef
 g
 7src/main/java/com/revature/service/PaintingService.java,2\8\28caed1d3cfcfdd1976c3de4a0278815ec314e60
 d

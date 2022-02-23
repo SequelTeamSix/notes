@@ -1,9 +1,11 @@
 package servlets;
 
+import com.revature.dao.ArtistDAO;
 import com.revature.model.Artist;
 import com.revature.service.ArtistService;
 import com.revature.service.PaintingService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,11 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/add")
 public class AddServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         out.println("Welcome to the Addition Servlet!");
 
@@ -24,12 +29,10 @@ public class AddServlet extends HttpServlet {
         out.println(num1+" + "+num2+" = "+(num1+num2));
 
         out.println("Here are my favorite artists: ");
-        ArtistService as = new ArtistService();
-        for(Artist a : as.getAllArtists()){
-            out.println(a);
-        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("artists");
+        rd.include(request, response);
+
+        out.println("Those were my favorite artists!");
     }
-
-
-
 }
