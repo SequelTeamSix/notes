@@ -10,3 +10,4 @@
 /hibernate.properties
 /src/main/resources/hibernate.properties
 **/hibernate.properties
+*.properties

@@ -1,5 +1,6 @@
 package hibernate.com.revature.util;
 
+import hibernate.com.revature.model.Director;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -26,7 +27,7 @@ public class HibernateUtil {
             config.setProperties(props);
             //we need to include our mapped objects!!!!!
 
-            /*here*/
+            config.addAnnotatedClass(Director.class);
 
             ServiceRegistry serviceRegistry= new StandardServiceRegistryBuilder()
                     .applySettings(config.getProperties()).build();
