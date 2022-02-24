@@ -1,6 +1,0 @@
-
-i	java:S116"TRename this field "artist_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÿ—ü
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô…ˆÌ8’ÒŞïï/
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÆàüÿÿÿÿ8”ÒŞïï/
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡©•ˆ8²Şïï/
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÆàüÿÿÿÿ8—ÒŞïï/

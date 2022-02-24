@@ -34,7 +34,7 @@ public final class Driver {
          */
 
         System.out.println(paintingService.getPainting("Composition IX"));
-        paintingService.addPainting(0, "Gentle Ascent", null, "Abstract", 1950);
+        //paintingService.addPainting(0, "Gentle Ascent", null, "Abstract", 1950);
 
     }
 }
