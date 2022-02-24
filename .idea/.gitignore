@@ -9,3 +9,4 @@
 /hibernate.cfg.xml
 /hibernate.properties
 /src/main/resources/hibernate.properties
+**/hibernate.properties
