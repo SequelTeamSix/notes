@@ -27,8 +27,6 @@ Y
 )src/main/java/lambdas/lambdasExample.java,c\7\c7fbc25a0c443af6c09f9c98f7432c3bd7e8ddf9
 Z
 *src/main/java/lambdas/RandomGenerator.java,d\2\d283d1086e201c610061403c6f473e1f11a6fb3e
-@
-Project1Reqs.txt,6\a\6a2b4bdb6371d5bb822d3436baf72d31e7c38789
 8
 rest.txt,7\a\7af603b13afc35e26f847b249cb14e4f655917cf
 ;

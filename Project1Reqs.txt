@@ -1,10 +1,19 @@
 Project 1:
 Likely due March 9th
 
+All
 You may use Java's collections implementations
+Must implement all CRUD (create-read-update-delete) functionality for database
+
+Option 1
 Must be a REST api that employs a front-controller/MVC architecture
 Must employ an ORM (hibernate, spring orm) instead of JDBC
-Must implement CRUD (create-read-update-delete) functionality for database
+
+OR
+
+Option 2
+You may use servlets to implement a front-end (you will have to learn html on your own)
+While using Hibernate
 
 Debating:
 Must be deployed on an azure VM (depending on how fast I can get to this)

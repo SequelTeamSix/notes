@@ -22,3 +22,9 @@ Assignment: download tomcat https://tomcat.apache.org/download-90.cgi (unzip to 
 
 2/22
 REST, selection sort implementation, binary search implementation
+
+2/23
+Servlets (request dispatcher, tomcat, front controller design pattern)
+
+2/24
+Hibernate
