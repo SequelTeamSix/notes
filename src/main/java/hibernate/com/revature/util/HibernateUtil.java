@@ -19,7 +19,7 @@ public class HibernateUtil {
             Configuration config = new Configuration();
             Properties props = new Properties();
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            props.load(loader.getResourceAsStream("hibernate.properties"));
+            props.load(loader.getResourceAsStream("C:\\Users\\TedBa\\Documents\\Revature\\hibernate.properties"));
 
 
             //add our properties to the configuration
