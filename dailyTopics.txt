@@ -27,4 +27,7 @@ REST, selection sort implementation, binary search implementation
 Servlets (request dispatcher, tomcat, front controller design pattern)
 
 2/24
-Hibernate
+Hibernate (setup, multiplicity, hql)
+
+2/25
+Finishing hibernate (fetch type, caching discussion, criteria api, hibernate object states)

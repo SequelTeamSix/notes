@@ -1,9 +1,18 @@
 package hibernate;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="movie")
+@JsonIdentityInfo(
+        //this is to stop recursive hibernate joins
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id"
+)
 public class Movie {
     @Id
     @Column(name="movie_id")
@@ -12,7 +21,28 @@ public class Movie {
     private String title;
     @ManyToOne
     @JoinColumn(name = "director_id")
+    @JsonIgnoreProperties(value = {"movies", "id"})
     public Director director;
+    @Column(nullable = true)
+    public int year;
+    @Column(nullable = true)
+    public String genre;
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 
     public int getMovie_id() {
         return movie_id;

@@ -13,12 +13,10 @@ public class DirectorRepository {
         try {
             Session session = HibernateUtil.getSession();
             Transaction transaction = session.beginTransaction();
-            if(getDirectorById(d.getId())==null) {
-                session.persist(d);
-                transaction.commit();
-                session.close();
-                return true;
-            }
+            session.persist(d);
+            transaction.commit();
+            session.close();
+            return true;
 
         }catch(HibernateException | IOException e){
             //e.printStackTrace();

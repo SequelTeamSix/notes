@@ -31,5 +31,3 @@ Z
 rest.txt,7\a\7af603b13afc35e26f847b249cb14e4f655917cf
 ;
 project.txt,1\3\13b3556077fd6ec3a2c338c629d9735bb5df3847
-@
-algoOverview.txt,0\9\0916dfbd66e9e93dd4eda186f8a842346367915c

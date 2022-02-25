@@ -34,8 +34,8 @@ public class driver {
         * so we can switch between whatever dialect was designated in the properties file
         * */
 
-        DirectorRepository dr = new DirectorRepository();
-        MovieRepository mr = new MovieRepository();
+        DirectorService ds = new DirectorService();
+        MovieService ms = new MovieService();
 
         Director d1 = new Director();
         d1.setId(1);
@@ -43,22 +43,32 @@ public class driver {
         Director d2 = new Director();
         d2.setId(2);
         d2.setName("Cronenberg");
-        dr.addDirector(d1);
-        dr.addDirector(d2);
+        ds.addDirector(d1);
+        ds.addDirector(d2);
 
-        List<Director> directors= dr.getAllDirectors();
+        List<Director> directors= ds.getAllDirectors();
         for(Director d : directors){
             System.out.println(d);
         }
         //Transient state
         //we have a java object, but that java object has not been persisted to the database yet
-        Movie m = new Movie();
-        m.setMovie_id(1);
-        m.setTitle("Solaris");
-        m.setDirector(d1);
+        Movie m1 = new Movie();
+        m1.setMovie_id(1);
+        m1.setTitle("Solaris");
+        m1.setDirector(d1);
         //Persistent object
         //we have a java object that is currently being persisted into the database
-        mr.addMovie(m);
+        ms.addMovie(m1);
+
+        m1.setYear(1970);
+        m1.setGenre("Romance");
+        ms.updateMovie(m1);
+        List<Movie> myMovies = ms.getAllMovies();
+        for(Movie m : myMovies){
+            System.out.println(m);
+        }
+
+        //Detached state
         //we have a java object that has been detached from its session
         //so changes in the object are not reflected in the database any more, nor are changes in the
         //database reflected in the object
@@ -79,55 +89,51 @@ public class driver {
         @OneToOne
          */
 
+        /*an advantage to using Object relational mapping:
+        if we want to perform a CRUD operation,
+        we often have multiple ways to do this
+        (I suppose using native SQL is an option, but this defeats the purpose of using hibernate)
 
+        CREATE:
+        save(object) - immediately inserts an object to the database
+        persist(object) - inserts the object at the end of transaction
 
+        UPDATE:
+        merge() - used to send back into persistence an object which we've already detached
+        (detached review - detached means that either the object has been .evict() or the session it belonged
+        to has closed)
+        if merge used with transient object, it will persist it
+        update()
+        may only be used on a persisted or detached object
 
+        READ:
+        load()
+        returns a proxy (reference) of an object from persistence
+        if no matches in database: return null
+        get()
+        immediately returns a mapped object
+        if no matches: throw an error
 
+        DELETE:
+        delete() a persisted object
 
+         */
 
+        /*lazy vs eager fetching:
+        lazy: entries received from joins are fetched from the database only when they are requested
+        eager: entries received from joins are fetched together with the object
+        it's a performance thing
 
+        two issues with this:
+        1: what if we try to lazily fetch from a detached object?
+        lazy initialization error: in order to lazily fetch, our objects should be persisted
 
-
-
-
-
-
-        /*
-        String sql = "Select * from Artist";
-        SQLQuery sqlQuery = session.createSQLQuery(sql);
-        List<Object[]> artistList= (List<Object[]>) sqlQuery.list();
-        List<Artist> artistList2= (List<Artist>) sqlQuery.list();
-        System.out.println(artistList.size());
-
-        List<Artist> artistList3= session.createCriteria(Artist.class).list();
-
-        List<Artist> artistList4= session.createQuery("FROM Artist", Artist.class).list();
-
-        for(int i = 0; i < artistList.size(); i++){
-            System.out.println(artistList.get(i)[1]);
-        }
-        for(int i = 0; i < artistList2.size(); i++){
-            System.out.println(artistList2.get(i));
-        }
-        for(int i = 0; i < artistList3.size(); i++){
-            System.out.println(artistList3.get(i));
-        }
-        for(int i = 0; i < artistList4.size(); i++){
-            System.out.println(artistList4.get(i));
-        }*/
-        /*
-        Artist a1 = new Artist();
-        a1.setName("Kandinsky");
-        a1.setArtist_id(1);
-        Artist a2 = new Artist();
-        a2.setName("Klee");
-        a2.setArtist_id(2);
-        Transaction tr = session.beginTransaction();
-        //session.save(a1);
-        session.persist(a2);
-        tr.commit();
-        session.close();
-        */
+        BUT:
+        2: what if we have both objects in a join eagerly fetched,
+        wouldn't they just fall into a loop of fetching each other?
+        in the case of creating json/string representations of the objects, yes!
+        so, if you get a stackoverflow error with hibernate, this is likely why
+         */
 
     }
 }

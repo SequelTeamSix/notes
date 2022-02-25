@@ -1,10 +1,20 @@
 package hibernate;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name="director")
+
+@JsonIdentityInfo(
+        //this is to stop recursive hibernate joins
+    generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id"
+)
 public class Director {
     @Id
     @Column(name="director_id")
@@ -14,7 +24,8 @@ public class Director {
     @Column(name="name")
     private String name;
 
-    @OneToMany(mappedBy = "director")
+    @OneToMany(mappedBy = "director", fetch=FetchType.EAGER)
+    @JsonIgnoreProperties(value="director")
     private List<Movie> movies;
 
     public List<Movie> getMovies() {

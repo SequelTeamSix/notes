@@ -4,14 +4,17 @@ Likely due March 9th
 All
 You may use Java's collections implementations
 Must implement all CRUD (create-read-update-delete) functionality for database
+Must include some form(s) of multiplicity
 
 Option 1
 Must be a REST api that employs a front-controller/MVC architecture
 Must employ an ORM (hibernate, spring orm) instead of JDBC
+Because this option is basically simpler, you would be required to make
+    some more complicated queries using either HQL or criteria API
 
 OR
 
-Option 2
+Option 2 (harder)
 You may use servlets to implement a front-end (you will have to learn html on your own)
 While using Hibernate
 
