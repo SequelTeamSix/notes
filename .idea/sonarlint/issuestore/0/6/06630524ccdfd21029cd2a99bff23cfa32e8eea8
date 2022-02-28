@@ -1,0 +1,5 @@
+
+h	java:S116"SRename this field "movie_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÔÊÙ
+c	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ğÌÙ
+c	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÉ“å
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÉ“å

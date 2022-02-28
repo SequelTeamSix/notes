@@ -1,0 +1,58 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        Spring utilizes the idea of an IOC container...
+            How the Container is created is dependent on the configurations in this file.
+        What Spring Bean?
+            - A spring bean is a class that you told spring to manage its dependencies for you
+         types of injection:
+            - setter injection (through getters and setters)
+            - constructor injection (through the constructor)
+         Scope of a bean
+            - Singleton (default): tells spring to only make one instance of that bean
+            - Prototype: creates an instance whenever someone asks
+            - Request: new instance will be created for every http request
+            - Session: new instance will be created for every session
+            - GlobalSession: single instance of that bean will exist for the entire sessionFactory
+    -->
+
+
+    <!--<bean name="videoGameDao" class="dao.VideoGameDaoImpl"/>-->
+
+
+    <!--constructor injection-->
+    <!--<bean name="videoGameService" class="services.VideoGameService">
+        &lt;!&ndash;we are referencing the entity we want to inject&ndash;&gt;
+        <constructor-arg index="0" ref="videoGameDao"/>
+    </bean>-->
+
+    <!--setter injection-->
+    <!--<bean name="videoGameService" class="services.VideoGameService">
+        <property name="videoGameDao" ref="videoGameDao"/>
+    </bean>-->
+
+    <!--
+        Autowiring our beans:
+            There are different autowiring modes:
+                - no: spring will not autowire anything
+                - byType: spring will autowire by data types
+                - byName: spring will autowire by variable names
+                - constructor: spring will autowire by constructor
+    -->
+    <!--<bean name="videoGameService" class="services.VideoGameService" autowire="byType"/>-->
+
+    <!--<bean name="videoGameService" class="services.VideoGameService" autowire="byName"/>-->
+
+
+    <!--annotation configs-->
+    <context:annotation-config/>
+    <context:component-scan base-package="spring"/>
+
+
+</beans>
