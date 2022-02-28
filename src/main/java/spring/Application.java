@@ -1,12 +1,34 @@
 package spring;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.model.Pokemon;
 import spring.service.PokemonService;
 
 import java.util.List;
 
+/*what's spring vs spring boot?
+spring boot introduces a new annotation
+that standardizes the initialization of a spring application
+meaning,
+@SpringBootApplication
+while replaces three annotations:
+@ComponentScan
+@EnableAutoConfiguration
+
+ */
+/*rather than using these three annotations:
+@ComponentScan
+@EnableAutoConfiguration
+@Configuration
+we can use:
+ */
+@SpringBootApplication
 public class Application {
 
     public static void main(String[] args){
@@ -16,6 +38,10 @@ public class Application {
         /*this thing is kind of like the big container of all the potential objects
         that are beans
          */
+
+        SpringApplication.run(Application.class);
+
+        /*
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         PokemonService pokeServ = context.getBean(PokemonService.class);
@@ -25,7 +51,7 @@ public class Application {
 
         for(Pokemon p : pokeList){
             System.out.println(p);
-        }
+        }*/
 
         /*What is Spring?
            Spring is a Java development ECOSYSTEM

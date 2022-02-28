@@ -31,8 +31,6 @@ Z
 rest.txt,7\a\7af603b13afc35e26f847b249cb14e4f655917cf
 ;
 project.txt,1\3\13b3556077fd6ec3a2c338c629d9735bb5df3847
-@
-Project1Reqs.txt,6\a\6a2b4bdb6371d5bb822d3436baf72d31e7c38789
 Y
 )src/main/java/hibernate/MovieService.java,7\8\7868be86f316f3278914093238e46626ebed0c28
 \

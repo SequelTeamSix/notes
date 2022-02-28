@@ -24,4 +24,11 @@ public class PokemonDAO {
         return pokemonList;
     }
 
+    public Pokemon getPokemon(Integer id) {
+        return pokemonList.get(id);
+    }
+
+    public void addPokemon(Pokemon p){
+        pokemonList.add(p);
+    }
 }

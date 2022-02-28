@@ -1,18 +1,27 @@
 package spring.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /*Lombok will automatically generate getter/setter methods and constructors
 using reflection and annotations at runtime
  */
 
 @AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString
+//@Entity
+//@Table
 public class Pokemon {
+//    @Id
+//    @NonNull
+    private int pokeId;
+//    @Column
     private String name;
 }

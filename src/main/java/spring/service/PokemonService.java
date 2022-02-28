@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import spring.model.Pokemon;
+import spring.repository.Nonsense;
 import spring.repository.PokemonDAO;
 
 import java.util.List;
@@ -41,4 +42,13 @@ public class PokemonService {
     public List<Pokemon> getAllPokemon(){
         return pokemonDAO.getAllPokemon();
     }
+
+    public Pokemon getPokemon(Integer id) {
+        return pokemonDAO.getPokemon(id);
+    }
+
+    public void addPokemon(Pokemon p){
+        pokemonDAO.addPokemon(p);
+    }
+
 }
