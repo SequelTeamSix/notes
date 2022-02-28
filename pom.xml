@@ -125,14 +125,14 @@
             <version> 2.13.1</version>
         </dependency>
 
-
+        <!-- lombok dependency -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
         </dependency>
 
-
+<!--        Spring dependencies -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -149,6 +149,7 @@
             <version>5.3.13</version>
         </dependency>
 
+<!--        Spring's logging dependencies   -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
