@@ -21,7 +21,7 @@ using reflection and annotations at runtime
 public class Pokemon {
 //    @Id
 //    @NonNull
-    private int pokeId;
+//    private int pokeId;
 //    @Column
     private String name;
 }

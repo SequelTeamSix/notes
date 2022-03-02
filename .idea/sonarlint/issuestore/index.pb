@@ -41,3 +41,13 @@ S
 dailyTopics.txt,d\e\de4389e05247e4b5fec386b39b06c0591e10ddc9
 R
 "src/main/java/hibernate/Movie.java,0\6\06630524ccdfd21029cd2a99bff23cfa32e8eea8
+@
+algoOverview.txt,0\9\0916dfbd66e9e93dd4eda186f8a842346367915c
+9
+	algoNotes,6\8\68afe5ba4d65a899ab9742a44daf041fa47b2dcf
+\
+,src/main/java/hibernate/DirectorService.java,c\c\cc8e3a09868783ed87e508e9c91f96f814c612ab
+_
+/src/main/java/hibernate/DirectorRepository.java,5\8\5808ef76470cc9f4bfd9039c837c60070eaca47c
+U
+%src/main/java/hibernate/Director.java,4\e\4e15f53b2e2976ed349b608c383efb6e6547de69
