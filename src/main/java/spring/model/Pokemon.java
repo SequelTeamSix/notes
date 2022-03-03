@@ -12,7 +12,6 @@ using reflection and annotations at runtime
  */
 
 @AllArgsConstructor
-@RequiredArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString

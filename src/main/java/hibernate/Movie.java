@@ -15,7 +15,7 @@ import javax.persistence.*;
 )
 public class Movie {
     @Id
-    @Column(name="movie_id")
+    @Column
     private int movie_id;
     @Column
     private String title;

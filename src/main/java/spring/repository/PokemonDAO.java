@@ -15,10 +15,11 @@ public class PokemonDAO {
 
      */
     public PokemonDAO() {
+        /*
         pokemonList = new ArrayList<Pokemon>();
         pokemonList.add(new Pokemon("Pikachu"));
         pokemonList.add(new Pokemon("Bulbasaur"));
-        pokemonList.add(new Pokemon("MewToo"));
+        pokemonList.add(new Pokemon("MewToo"));*/
     }
     public List<Pokemon> getAllPokemon(){
         return pokemonList;

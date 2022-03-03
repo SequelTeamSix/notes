@@ -1,5 +1,7 @@
 package hibernate;
 
+import org.hibernate.Session;
+
 import java.util.List;
 
 public class DirectorService {
@@ -19,5 +21,8 @@ public class DirectorService {
         }else{
             return false;
         }
+    }
+    public List<Movie> getAllDirectorsMovies(Director director, Session session){
+        return dr.getAllDirectorsMovies(director, session);
     }
 }

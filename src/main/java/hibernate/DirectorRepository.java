@@ -54,4 +54,21 @@ public class DirectorRepository {
         }
         return null;
     }
+
+    public List<Movie> getAllDirectorsMovies(Director director, Session session) {
+        List<Movie> movies = null;
+        try {
+
+            Transaction tx = session.beginTransaction();
+            Director director2 = session.get(Director.class, director.getId());
+            movies= director2.getMovies();
+
+            tx.commit();
+            return movies;
+        }catch(HibernateException e){
+            e.printStackTrace();
+        }finally{
+        }
+        return movies;
+    }
 }

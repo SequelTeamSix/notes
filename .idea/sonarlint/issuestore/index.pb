@@ -31,13 +31,5 @@ Z
 rest.txt,7\a\7af603b13afc35e26f847b249cb14e4f655917cf
 ;
 project.txt,1\3\13b3556077fd6ec3a2c338c629d9735bb5df3847
-Y
-)src/main/java/hibernate/MovieService.java,7\8\7868be86f316f3278914093238e46626ebed0c28
-\
-,src/main/java/hibernate/MovieRepository.java,0\1\012aca29d0f4e85ab3f1dff40b8ccd1f79233a63
-S
-#src/main/java/hibernate/driver.java,4\9\491d7abab57b21d26dac0ef61762d9596f69dbed
 ?
 dailyTopics.txt,d\e\de4389e05247e4b5fec386b39b06c0591e10ddc9
-R
-"src/main/java/hibernate/Movie.java,0\6\06630524ccdfd21029cd2a99bff23cfa32e8eea8

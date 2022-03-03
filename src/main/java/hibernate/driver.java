@@ -8,7 +8,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class driver {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Session session = HibernateUtil.getSession();
         /*native sql hibernate query
         basically, this is bad
         it's bad especially because this isn't dialect agnostic
@@ -63,11 +64,24 @@ public class driver {
         m1.setYear(1970);
         m1.setGenre("Romance");
         ms.updateMovie(m1);
+
+        Movie m2 = new Movie();
+        m2.setMovie_id(2);
+        m2.setTitle("Stalker");
+        m2.setDirector(d1);
+        ms.updateMovie(m2);
+/*
         List<Movie> myMovies = ms.getAllMovies();
         for(Movie m : myMovies){
             System.out.println(m);
+        }*/
+
+        List<Movie> directorsMovies = ds.getAllDirectorsMovies(d1, session);
+        for(Movie m : directorsMovies){
+            System.out.println(m);
         }
 
+        session.close();
         //Detached state
         //we have a java object that has been detached from its session
         //so changes in the object are not reflected in the database any more, nor are changes in the
