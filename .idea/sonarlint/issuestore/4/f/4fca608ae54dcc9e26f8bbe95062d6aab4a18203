@@ -1,5 +1,0 @@
-
-Q	java:S125"<This block of commented-out lines of code should be removed.(À™‡“
-{
-java:S2293 "YReplace the type specification in this constructor call with the diamond operator ("<>").(ãðªÇÿÿÿÿÿ8ŠçþÛô/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê€Œ©þÿÿÿÿ

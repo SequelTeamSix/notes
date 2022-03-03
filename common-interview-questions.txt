@@ -1,8 +1,0 @@
-Lifecycles in general:
-    SDLC, agile/waterfall lifecycle
-    Maven lifecycle
-    Spring Bean lifecycle
-
-Your OOP principles
-
-the interface vs abstract class question (I hate this)

@@ -48,13 +48,6 @@ public class PokemonController {
     public void addPokemon(@RequestBody Pokemon pokemon){
         pokemonService.addPokemon(pokemon);
     }
-    /*to perform actions other than GET:
-    curl -X POST (url here)
-    just get:
-    curl (url here)
-    or use postman (particularly if you want to use request bodies)
-     */
-
 
     /*
     Spring web MVC:
