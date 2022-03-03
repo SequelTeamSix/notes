@@ -9,17 +9,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*
+
 @Entity
-@Table(name = "Digimon")
+@Table(name = "Digimon")*/
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class Digimon {
-    @Id
+    //@Id
     private int digimonID;
-    @Column
+    //@Column
     private String name;
-    @Column
+   // @Column
     private int power;
 
 }

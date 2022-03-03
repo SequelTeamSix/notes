@@ -1,0 +1,9 @@
+
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(±’³¹ùÿÿÿÿ8ş‹ùÛô/
+]	java:S125'"<This block of commented-out lines of code should be removed.(õ»ôÀøÿÿÿÿ8€ŒùÛô/
+k
+java:S1128"IRemove this unused import 'org.springframework.context.annotation.Scope'.(şè®€ÿÿÿÿÿ8‰ŒùÛô/
+g
+java:S1128"ERemove this unused import 'org.springframework.stereotype.Component'.(Ş÷Ñ¸ÿÿÿÿÿ8ŠŒùÛô/
+Y
+java:S1128"7Remove this unused import 'spring.repository.Nonsense'.(ëù×’ûÿÿÿÿ8ŠŒùÛô/

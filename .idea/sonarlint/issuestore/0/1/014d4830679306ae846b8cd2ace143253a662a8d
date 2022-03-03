@@ -1,0 +1,7 @@
+
+]	java:S125"<This block of commented-out lines of code should be removed.(²­µ²üÿÿÿÿ8ŸÒôİô/
+Y
+java:S1128"7Remove this unused import 'org.aspectj.lang.JoinPoint'.(¾Öùúÿÿÿÿ8ŸÒôİô/
+a
+java:S1128"?Remove this unused import 'org.aspectj.lang.annotation.Before'.(™ Ş¡ÿÿÿÿÿ8 Òôİô/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á¿êü

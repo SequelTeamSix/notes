@@ -23,9 +23,9 @@ public class DigimonController {
         return digimonService.getAllDigimon();
     }
 
-    @GetMapping({"id"})
-    public List<Digimon> getAllDigimon(@PathVariable Integer id){
-        return digimonService.getAllDigimon();
+    @GetMapping({"name"})
+    public List<Digimon> getAllDigimonByName(@PathVariable String name){
+        return digimonService.getAllDigimonByName(name);
     }
 
 }

@@ -1,0 +1,11 @@
+
+Q
+java:S1128"5Remove this unused import 'javax.persistence.Column'.(ìûæH8¢ßíÛô/
+W
+java:S1128"5Remove this unused import 'javax.persistence.Entity'.(úƒßıûÿÿÿÿ8ë³íÛô/
+N
+java:S1128	"1Remove this unused import 'javax.persistence.Id'.(ş¹ŞÜ8£ßíÛô/
+V
+java:S1128
+"4Remove this unused import 'javax.persistence.Table'.(˜øŒ“øÿÿÿÿ8ë³íÛô/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢Èî8¦Ë¨Ûô/
