@@ -10,19 +10,25 @@ Algorithms - process for doing operations that solves a particular goal
 DS:
 (you should know things like insertion at beginning/end, deletion, searches,
 traversal of all elements when applicable)
-Binary Tree (including traversal)
-Linked List
-Array List
+Binary Tree (including traversal) (*)
+Linked List (*)
+Array List (*)
 All types of queue (queue, stack, arraydeque)
 Hash table (set/map)
 
 Algorithms:
 You should know:
-The basic sorts (Bubble, Selection, Insertion)
+The basic sorts (Bubble, Selection, Insertion) (*)
 Merge Sort
-Linear search
-Binary search
-Depth-first search
+Linear search (*)
+Binary search (*)
+Depth-first search (means that we navigate to a path as far as possible until we are
+forced back, binary tree search) (*)
 Breadth-first search
 
 At the end I'd like to mention some other algorithms like Dijkstra's/graph search
+
+My recommendation for studying algorithms:
+take the implementations and add in print statements to see the state that the execution
+is in at any moment
+As well as reading about them online

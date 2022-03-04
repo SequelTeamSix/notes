@@ -109,6 +109,36 @@ public class AnimalTree<T extends Comparable<T>> {
             }
         }
     }
+
+    public void traverse(){
+        System.out.println("STARTING TRAVERSAL: ");
+        AnimalBranch<T> current = head;
+        traverseHelper(head);
+    }
+    public void traverseHelper(AnimalBranch<T> current){
+//        print 'visiting branch for first time'
+        System.out.println("Visiting branch "+ current+ " for the first time");
+//        check the left branch
+        if(current.getLeft()!=null){
+//        if left branch is not null, then recurse to left branch
+//          traverseHelper(left)
+            System.out.println("Navigating to left branch");
+            traverseHelper(current.getLeft());
+        }
+//        if we get to this point, the left hand side has been fully
+//        explored
+        System.out.println("Returned to "+current+" from left branch");
+        if(current.getRight()!=null) {
+//        if right branch is not null, then recurse to right branch
+//          traverseHelper(right)
+            traverseHelper(current.getRight());
+        }
+//        if we get to this point, right hand branch has been fully explored
+        System.out.println("Returned to "+current+" from right branch");
+        System.out.println(current+" Has been fully explored");
+//        print 'branch has been fully explored'
+//        we return from here
+    }
 /*
 time complexity:
 

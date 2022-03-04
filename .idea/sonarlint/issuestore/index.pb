@@ -1,6 +1,4 @@
 
-M
-src/main/java/zoo/Driver.java,3\4\345e0d87bdd05de62cb0b5a1779d8364be0b1501
 Q
 !src/main/java/cookies/Cookie.java,b\c\bcf2fc3f2027beb5e1a8a578730d53ee2efc47cf
 a

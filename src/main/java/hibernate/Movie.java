@@ -27,7 +27,9 @@ public class Movie {
     public int year;
     @Column(nullable = true)
     public String genre;
-
+    @ManyToMany
+    @JoinTable(name="Performance")
+    public Actor actor;
     public int getYear() {
         return year;
     }

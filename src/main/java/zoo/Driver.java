@@ -84,7 +84,7 @@ public class Driver {
 
 
          */
-
+/*
         try{
             Animal a7 = new Animal("Bigfoot");
             tree.add(a7);
@@ -94,7 +94,9 @@ public class Driver {
         } catch (FakeAnimalException e) {
             Driver.log.warn("Not real");
         }
+*/
 
+        tree.traverse();
 
     }
 }
