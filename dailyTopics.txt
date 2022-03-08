@@ -31,3 +31,14 @@ Hibernate (setup, multiplicity, hql)
 
 2/25
 Finishing hibernate (fetch type, caching discussion, criteria api, hibernate object states)
+
+3/7
+Attempting to use Azure devops, to limited success
+Talked about Devops philosophy
+Assignment: devops pipeline not a requirement for p2 at the moment
+
+3/8
+Docker, Coding Challenge advice
+Assignmnet: install docker (revpro installation guide it good, follow it 100%,
+remember that powershell and docker must both be run as administrator)
+Reread the coding challenge notes, practice it yourself, work on projects
