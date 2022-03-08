@@ -31,3 +31,17 @@ Z
 project.txt,1\3\13b3556077fd6ec3a2c338c629d9735bb5df3847
 ?
 dailyTopics.txt,d\e\de4389e05247e4b5fec386b39b06c0591e10ddc9
+@
+Project1Reqs.txt,6\a\6a2b4bdb6371d5bb822d3436baf72d31e7c38789
+W
+'src/main/java/spring/model/Pokemon.java,3\0\307870001d169defa1849230f4bd467d365db48a
+_
+/src/main/java/spring/repository/PokemonDAO.java,f\c\fcb7946cefd37d8f2a0e6b56f945a7a096761e3c
+Y
+)src/main/java/hibernate/MovieService.java,7\8\7868be86f316f3278914093238e46626ebed0c28
+\
+,src/main/java/hibernate/MovieRepository.java,0\1\012aca29d0f4e85ab3f1dff40b8ccd1f79233a63
+\
+,src/main/java/hibernate/DirectorService.java,c\c\cc8e3a09868783ed87e508e9c91f96f814c612ab
+M
+src/main/java/zoo/Driver.java,3\4\345e0d87bdd05de62cb0b5a1779d8364be0b1501
