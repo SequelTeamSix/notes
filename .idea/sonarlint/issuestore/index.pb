@@ -33,12 +33,8 @@ Y
 )src/main/java/hibernate/MovieService.java,7\8\7868be86f316f3278914093238e46626ebed0c28
 \
 ,src/main/java/hibernate/MovieRepository.java,0\1\012aca29d0f4e85ab3f1dff40b8ccd1f79233a63
-\
-,src/main/java/hibernate/DirectorService.java,c\c\cc8e3a09868783ed87e508e9c91f96f814c612ab
 M
 src/main/java/zoo/Driver.java,3\4\345e0d87bdd05de62cb0b5a1779d8364be0b1501
-S
-#src/main/java/hibernate/driver.java,4\9\491d7abab57b21d26dac0ef61762d9596f69dbed
 Q
 !src/main/java/zoo/AnimalTree.java,3\c\3c79ad84b86f0dda8f8c139e97cf43eeb16ab170
 7

@@ -1,0 +1,66 @@
+Microservices
+
+Monoliths (what we considered a normal web service up until now):
+Development cost:
+- If we break one part of the monolith service, we likely break everything
+- Multiple developers need to modify the same service constantly
+Scalability:
+- If we want to increase the load on our service, we need to scale to a larger machine
+	- At a certain point, this becomes untenable
+	- Back in the day, one company needed to handle a *lot* of data all the time, and this old system wasn't going to bring them any success,
+		and they needed to invent a new architecture
+
+Microservices:
+- We split up what would a single monolith into many smaller web services
+- Example: maybe you have an accounts service, a store service, an item service, etc for a retail application
+- The microservices communicate with each other to perform tasks
+- The differences over monolith:
+	- Every service is going to have its own deployment pipeline
+	- Meaning, that the work of one developer won't even touch the repo of another
+		-If something breaks, maybe the user can't purchase items anymore, but they can still browse/add to cart
+	- Scalability
+		- Services can be scaled individually
+			- Maybe our items service is experiencing heavy load, but account signup service is experiences light load
+				Our item service can be scaled independently from account signup service
+	- Con:
+		- It's an intentional design pattern with additional development cost over a monolith
+			EG in a monolith, changing acct balance from a purchase is as simple as deducting the cost which we get from item repo
+			from the user which we get from user repo
+
+			In a MSA, we don't have direct access anymore, and those interactions with the repo now must pass through the internet
+				The loss in development speed is overcome by the benefits in development speed created by increased modularization
+				The loss in performance is overcome by greater control over scalability of a single MS over a entire monolith
+			The ideal is if we're in a situation where the amount of data that needs to be process is so large and so intricate
+				that the costs of the MSA are worthwhile (think Netflix, which has something like 2000 MS)
+
+
+- Gateway service - mediates the MSA with the user interaction
+- We have all these microservices (potentially thousands in total), how does each MS know how to communicate with the others? We need to 'discover' them
+	and we need to maintain a registry of how we should communicate with them
+- Discovery service (Eureka, Consul, Zookeper)
+
+Messaging Queues
+
+What if we need to pass around a whole lot of data in real-time?
+think, for example, of a chat service:
+does it make sense to send chat messages to a DB and then retrieve them immediately for the other user?
+not necessarily:
+slow, high throughput through database
+Kafka:
+publisher/subscriber model
+We define a certain structure of data within Kafka (these are still tables)
+we define some service that publishes data
+services can also subscribe to that data
+
+pub/sub model: you can have multiple publishers to a stream of data and multiple subscribers
+
+If you need to pass data around in real-time, then we use a Messaging Queue
+
+Docker:
+- Containerization:
+Converting a service into a docker container that we can use and move around anywhere
+- Orchestration:
+As dockerfiles are to images, orchestration are to dockerfiles
+	We are automating the act of creating images
+Composition:
+	Assists with multi-container applications (like microservices)
