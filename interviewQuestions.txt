@@ -1,0 +1,19 @@
+General
+
+Tell me about yourself -
+    - Prior work/university experience
+    - What got you interested in programming
+    - Your experience at Revature
+    etc
+
+Project Questions
+
+Tell me about your projects
+    What they were, what the technologies used were,
+    what your role was (group project)
+
+How do you approach learning new technologies?
+
+Teamwork Questions
+
+How do you handle disagreements on your team?
