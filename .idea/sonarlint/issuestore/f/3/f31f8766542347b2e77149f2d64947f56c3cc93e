@@ -1,0 +1,24 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(ıê§àÿÿÿÿÿ
+t
+java:S3012!"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(àÑÏ¦ÿÿÿÿÿ
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(ë…Çš
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(š›êùÿÿÿÿ
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(†ÚâŸ
+S	java:S106="9Replace this use of System.out or System.err by a logger.(İ¡ùÿÿÿÿ
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(†ÚâŸ
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(İ¡ùÿÿÿÿ
+N	java:S106R"9Replace this use of System.out or System.err by a logger.(Í¸èÅ
+M	java:S106T"9Replace this use of System.out or System.err by a logger.(°•Ş
+J
+java:S1854Y"5Remove this useless assignment to local variable "b".(¿ÿÓ0
+P
+java:S1854X"5Remove this useless assignment to local variable "a".(ßÙè°øÿÿÿÿ
+A
+java:S1481X"&Remove this unused "a" local variable.(ßÙè°øÿÿÿÿ
+;
+java:S1481Y"&Remove this unused "b" local variable.(¿ÿÓ0
+P	java:S125Z"<This block of commented-out lines of code should be removed.(æÄ®
+N	java:S106^"9Replace this use of System.out or System.err by a logger.(æêí
+^
+java:S11929"HDefine a constant instead of duplicating this literal "Adding " 4 times.(†ÚâŸ
