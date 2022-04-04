@@ -1,0 +1,33 @@
+time complexity of algorithms:
+
+O(): worst case scale of operations that will be performed by an algorithm
+O(1): constant
+linked list add to start
+
+does the speed of adding to start of linked change based on if 100 elements have been inserted
+or 10?
+no, because we're just creating an object
+and setting a single memory reference
+
+but, if we need to traverse the linked list to the end before adding to the end,
+they we need to traverse n amount of nodes before we add
+so adding to end in a singly-linked list is o(n)
+
+doubly-linked list - links both forwards and backwards in linked list, and we keep track
+of the tail as well as the head o(1) for both head and tail
+in a singly linked list, we store a reference for the next node in each node
+in a double linked list, we store a reference for both the next and previous node
+we store not only the head, but the tail (because we can now move backwards in traversal)
+
+O(n): linear
+single for loop
+linear search
+O(n^x): exponential
+x amount of nested for loops
+n^2: selection, insertion sort
+O(log(n)): logarithmic
+a problem that divides itself
+binary search
+O(n(log(n))):
+a problem that divides itself within a for loop
+merge sort
