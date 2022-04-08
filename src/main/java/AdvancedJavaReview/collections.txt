@@ -1,0 +1,23 @@
+list -
+sequentially ordered list of items, iterable, maintain their order, can contain nulls/duplicates
+arraylist/linkedlist
+set -
+only unique values
+treeset/hashset
+(treeset is ordered and can be iterated through and is log(n) insert/get,
+hashset cannot be ordered and is o(1) for insert/get)
+map -
+unique keys paired with their values
+(hashmap, treemap)
+HashMap<Integer, String> myHashMap = new HashMap<Integer, String>;
+
+hashtable vs hashmap?
+hashmap allows for a single null key/null values and hashtable does not
+hashtable is thread safe
+stringbuffer is threadsafe (over stringbuilder)
+vector is threadsafe (over arraylist)
+
+queue -
+fifo add to end
+stack -
+lifo 'push' and 'pop'

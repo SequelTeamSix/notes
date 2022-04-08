@@ -1,6 +1,4 @@
 
-Q
-!src/main/java/cookies/Cookie.java,b\c\bcf2fc3f2027beb5e1a8a578730d53ee2efc47cf
 a
 1src/main/java/com/revature/dao/MyAbstractDao.java,3\8\38256d9ed2a67bd3d1ae22d0e208f6ef9caa1184
 P
@@ -33,10 +31,6 @@ Y
 )src/main/java/hibernate/MovieService.java,7\8\7868be86f316f3278914093238e46626ebed0c28
 \
 ,src/main/java/hibernate/MovieRepository.java,0\1\012aca29d0f4e85ab3f1dff40b8ccd1f79233a63
-M
-src/main/java/zoo/Driver.java,3\4\345e0d87bdd05de62cb0b5a1779d8364be0b1501
-Q
-!src/main/java/zoo/AnimalTree.java,3\c\3c79ad84b86f0dda8f8c139e97cf43eeb16ab170
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 _
