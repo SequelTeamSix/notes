@@ -1,0 +1,145 @@
+Axios
+Previously, node.js did not have the fetch API built in
+Axios is our way of performing what the fetch API does in node
+problem this solves:
+Axios and fetch are promise-based http requests
+    promises -> asynchronous behavior that tells us that a variable will contain a value in the future
+    async -> allows us to declare a function as async, which executes the function asynchronously
+    in the event of an await statement
+    await -> wait for some operation, like the fulfilling of a promise, and can only be used in an async function
+
+    promise.fulfill()
+
+    .then() allows us to use axios without async await by defining behavior that should occur after promise fulfilled
+    using a callback
+
+Docker
+Docker is a containerization tool
+
+    Containerization - previously we used VMs, which are simulations of hardware on our computer
+    While they are useful and provide a totally isolated environment within its OS,
+    Containerization was created to be a more lightweight method of creating virtualization (an isolated sandbox,
+    a place where a program has the illusion of complete control over its environment, when it is actually
+    in a virtual environment, in a virtual machine / container)
+    Containers, rather than simulating the entire OS, reuse part of the OS so that the overall environment is lighter
+
+    What else?
+
+    Docker also allows us to build images which allow us to build containers quickly
+    Docker allows for Dockerfiles, which are basically scripts that allow us to build images:
+    for instance, every dockerfile will start from "from" (an image) and allows us to build more in it:
+    for instance, we can have something like
+
+    from ubuntu
+    apt-get jdk
+    mvn package
+
+    etc, the combination of which may give us an environment
+    which can run our java project
+
+    why do we need this exactly?
+    problem it solves:
+    This will make it easy to standardize the environment that the application runs in,
+    because we want to avoid issues of nonstandard environment, like the developer writing code that works on the test
+    environment, but not on the production environment
+    As well as being lightweight and easy to transport between machines using dockerhub
+
+    AOP
+
+    Aspect oriented programming
+    problem it solves:
+    Ideally, we want all of our methods to do a single thing
+    But, oftentimes, we need to have some additional functionality occur as we are running these methods:
+    for instance, we have used AOP for logging, but are also useful for error handling, security checks,
+    transaction control (this is actually how @Transactional is implemented), etc
+    We want to have these concerns be somehow injected into our methods without us writing them ourselves:
+        Because, what if something about our DB security needs to be changed across multiple methods?
+        Rather, we can just change the code that is applied to our methods a single time using AOP
+
+    Aspect - a concern that cuts across methods/classes
+    Weaving - The process of linking aspects with objects, performed at runtime
+    Join point - A specific moment where action can be taken - what is the annotation like @before @after @around @afterthrowing
+    Advice - Action taken by an aspect at a specific join point - what we put inside of AOP method
+    Pointcut - Definition of methods where advice should be injected - pointcut expression that defines what methods to run this
+    on, typically using wildcard expressions like *
+
+    NodeJS
+    previously, we were creating HTML pages with script tags (ie a static webpage)
+    this ties JS to be executed on the client side and all in all limits our functionality a bit
+    NodeJS allows for JS to be run independently, on the server-side, as a web server
+    So, NodeJS also comes with NPM (node package manager), which allows us to install productive packages
+    and NPX, the package executor, which also allows us to create a react app
+    npm, some things we can use
+        -typescript (transpiled strongly typed superset of js)
+        -react
+            -react-router-dom
+            -axios
+            -redux
+        -babel (transpiles js code to a lower version of js)
+        -webpack (bundles js files together)
+        -angular (react competitor)
+    As the JRE is to Java, node is to JS
+    As Maven is to Java, npm is to JS
+
+    Compiletime/runtime
+    We've been abstracting away compilation more or less since day 1.. but compilation always happens with java
+    Compile: happens during the compilation from .java file to .class file (to bytecode)
+    Runtime: happens during the program run
+    JS is interpreted, meaning it runs as it is, with no need for compilation*
+        *Transpilation, converting high-level language to high-level language (ts to js)
+        *Compilation, converting a high-level language to a low-level one (java to bytecode)
+
+    Bean instatiation
+    Dependencies injection (autowired)
+    init() method
+    run the bean's utility method (running the bean itself, using its methods, etc)
+    run destroy method (now outside of its scope, like it's http session scoped and session ends)
+
+    mvn validate - test if the pom file is valid, basically
+    mvn compile - compile all
+    mvn test - compile, run test suit
+    mvn package - run all previous, package into a jar file
+    mvn integration-test - check that different portions of the application can run together
+    mvn verify - run all previous
+    mvn install - install the package in a particular repository
+    mvn deploy - deploy application
+
+    component initialization
+
+    component mounting
+        componentWillMount()
+            render
+        componentDidMount()
+    component update
+        setState()
+            componentWillUpdate()
+            render
+            componentDidUpdate()
+    component unmount
+        componentWillUnmount()
+
+    unmount in functional components is managed by a return in useeffect
+
+    currying is a transformation of a function that transforms from f(a,b,c) to f(a)(b)(c)
+
+    springboot - autoconfiguration
+    previously, we had to have spring configurationfile
+
+    public class Application {
+
+        public static void main(String[] args){
+
+            ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        }
+    }
+
+    spring boot does autoconfiguration so that we no longer need ApplicationContext or manually declaring a componentscan
+    @ComponentScan
+    @EnableAutoConfiguration - automatically generated the ApplicationContext and creates beans based off of the component
+    scan for us
+    @Configuration
+
+
+
+

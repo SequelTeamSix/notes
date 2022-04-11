@@ -1,0 +1,6 @@
+
+h	java:S116"SRename this field "movie_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿‘ Ÿ
+V	java:S125""<This block of commented-out lines of code should be removed.(ëÑá¸˙ˇˇˇˇ
+c	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÃŸ
+c	java:S1007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ìÂ
+f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ìÂ

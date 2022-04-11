@@ -1,0 +1,18 @@
+
+f
+java:S1149 "PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(‡ÛØ
+Q	java:S125"<This block of commented-out lines of code should be removed.(­©öå
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ï±
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ğ¨õñıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¢µúæüÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ–€
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Ÿ–€
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(ı«éÒøÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(ÇÙ¤“ûÿÿÿÿ
+>	java:S108-")Either remove or fill this block of code.(³²˜Ç
+>	java:S108/")Either remove or fill this block of code.(‡½Ç
+<	java:S1081")Either remove or fill this block of code.(Ë±K
+o
+java:S2293 "YReplace the type specification in this constructor call with the diamond operator ("<>").(‡ÛØ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥Œ½½ûÿÿÿÿ
