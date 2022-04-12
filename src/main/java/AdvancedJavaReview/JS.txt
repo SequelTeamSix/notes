@@ -1,0 +1,8 @@
+Bubbling and capturing:
+event propagation - when an event fires in js, it is activated on its element, but also propagates to others
+bubbling - the event recursively propagates to parent elements
+capturing - the event recursively propagates to child elements
+
+target.addEventListener(type, listener, true)
+button.addEventListener(onclick, callback, true)
+send the onclick event to all children of button
